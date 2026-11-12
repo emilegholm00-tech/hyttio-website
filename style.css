@@ -207,3 +207,4 @@ footer .spacer { flex: 1; }
 .langbar { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; justify-content: center; background: var(--yellow); color: #1d1d1f; font-size: 15px; padding: 9px 44px 9px 16px; position: relative; }
 .langbar a { color: #081840; font-weight: 700; }
 .langbar button { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: 0; font-size: 16px; cursor: pointer; color: #1d1d1f; }
+@media (max-width: 500px) { .article th, .article td { padding: 10px 8px; font-size: 15px; hyphens: auto; overflow-wrap: anywhere; } }

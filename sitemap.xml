@@ -1,12 +1,167 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://hyttio.com/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://hyttio.com/no/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://hyttio.com/sv/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://hyttio.com/en/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://hyttio.com/dele-sommerhus.html</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://hyttio.com/udgifter-sommerhus.html</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://hyttio.com/tjekliste-sommerhus.html</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://hyttio.com/husregler-skabelon.html</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://hyttio.com/privacy.html</loc><lastmod>2026-11-12</lastmod></url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://hyttio.com/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/no/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/sv/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/en/</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/dele-sommerhus.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/dele-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/dele-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/dela-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/sharing-a-holiday-home.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/no/dele-hytte.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/dele-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/dele-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/dela-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/sharing-a-holiday-home.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/sv/dela-stuga.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/dele-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/dele-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/dela-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/sharing-a-holiday-home.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/en/sharing-a-holiday-home.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/dele-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/dele-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/dela-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/sharing-a-holiday-home.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/udgifter-sommerhus.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/udgifter-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/utgifter-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/utgifter-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/splitting-costs.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/no/utgifter-hytte.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/udgifter-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/utgifter-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/utgifter-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/splitting-costs.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/sv/utgifter-stuga.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/udgifter-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/utgifter-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/utgifter-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/splitting-costs.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/en/splitting-costs.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/udgifter-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/utgifter-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/utgifter-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/splitting-costs.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/tjekliste-sommerhus.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/tjekliste-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/sjekkliste-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/checklista-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/holiday-home-checklist.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/no/sjekkliste-hytte.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/tjekliste-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/sjekkliste-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/checklista-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/holiday-home-checklist.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/sv/checklista-stuga.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/tjekliste-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/sjekkliste-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/checklista-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/holiday-home-checklist.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/en/holiday-home-checklist.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/tjekliste-sommerhus.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/sjekkliste-hytte.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/checklista-stuga.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/holiday-home-checklist.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/husregler-skabelon.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/husregler-skabelon.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/hytteregler-mal.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/husregler-mall.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/house-rules-template.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/no/hytteregler-mal.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/husregler-skabelon.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/hytteregler-mal.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/husregler-mall.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/house-rules-template.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/sv/husregler-mall.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/husregler-skabelon.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/hytteregler-mal.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/husregler-mall.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/house-rules-template.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/en/house-rules-template.html</loc>
+    <lastmod>2026-11-12</lastmod>
+    <xhtml:link rel="alternate" hreflang="da" href="https://hyttio.com/husregler-skabelon.html"/>
+    <xhtml:link rel="alternate" hreflang="nb" href="https://hyttio.com/no/hytteregler-mal.html"/>
+    <xhtml:link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/husregler-mall.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://hyttio.com/en/house-rules-template.html"/>
+  </url>
+  <url>
+    <loc>https://hyttio.com/privacy.html</loc>
+    <lastmod>2026-11-12</lastmod>
+  </url>
 </urlset>
