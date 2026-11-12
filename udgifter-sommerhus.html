@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="da">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fordeling af udgifter i et fælles sommerhus – beregner og Excel | Hyttio</title>
+<meta name="description" content="Sådan fordeler I udgifterne i et sommerhus, I ejer sammen: faste udgifter efter ejerandel og forbrug efter brug. Gratis beregner og Excel-skabelon.">
+<meta property="og:title" content="Sådan fordeler I udgifterne i et fælles sommerhus">
+<meta property="og:description" content="Gratis beregner: faste udgifter efter ejerandel, forbrug efter antal dage. Med Excel-skabelon.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://emilegholm00-tech.github.io/hyttio-website/udgifter-sommerhus.html">
+<meta property="og:image" content="https://emilegholm00-tech.github.io/hyttio-website/img/da-3-expenses.jpg">
+<meta property="og:locale" content="da_DK">
+<meta name="apple-itunes-app" content="app-id=6828492052">
+<link rel="icon" href="img/icon.png">
+<link rel="canonical" href="https://emilegholm00-tech.github.io/hyttio-website/udgifter-sommerhus.html">
+<link rel="stylesheet" href="style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Sådan fordeler I udgifterne i et fælles sommerhus",
+      "inLanguage": "da",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "image": "https://emilegholm00-tech.github.io/hyttio-website/img/da-3-expenses.jpg",
+      "author": { "@type": "Organization", "name": "Hyttio", "url": "https://emilegholm00-tech.github.io/hyttio-website/" },
+      "mainEntityOfPage": "https://emilegholm00-tech.github.io/hyttio-website/udgifter-sommerhus.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Hyttio", "item": "https://emilegholm00-tech.github.io/hyttio-website/" },
+        { "@type": "ListItem", "position": 2, "name": "Fordel udgifterne", "item": "https://emilegholm00-tech.github.io/hyttio-website/udgifter-sommerhus.html" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Hvordan fordeler man udgifterne i et fælles sommerhus?", "acceptedAnswer": { "@type": "Answer", "text": "En almindelig model er at fordele faste udgifter som ejendomsskat og forsikring efter ejerandel, mens forbrug som el, vand og brænde fordeles efter, hvor meget hver familie bruger huset." } },
+        { "@type": "Question", "name": "Hvilke udgifter er der til et sommerhus?", "acceptedAnswer": { "@type": "Answer", "text": "Typisk ejendomsskat, forsikring, el, vand, renovation, skorstensfejer, grundejerforening, vedligehold og eventuelt lån. Hertil kommer forbrug som brænde, rengøring og fælles indkøb." } }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="img/icon.png" alt="">Hyttio</a>
+    <nav>
+      <a href="./#saadan">Sådan virker det</a>
+      <a href="dele-sommerhus.html">Dele sommerhus</a>
+      <a href="udgifter-sommerhus.html" aria-current="page">Fordel udgifterne</a>
+      <a href="tjekliste-sommerhus.html">Tjekliste</a>
+      <a href="./#support">Support</a>
+    </nav>
+    <a class="btn small" href="https://apps.apple.com/app/id6828492052">Hent appen</a>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <div class="wrap narrow">
+      <h1>Sådan fordeler I udgifterne i et fælles sommerhus</h1>
+      <p>Faste udgifter efter ejerandel, forbrug efter hvor meget I bruger huset. Prøv beregneren, eller hent Excel-skabelonen.</p>
+      <p class="updated">Opdateret 12. november 2026</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="calc" data-calc>
+        <div class="in">
+          <div class="money">
+            <div>
+              <label for="fixed">Faste udgifter pr. år</label>
+              <div class="field"><input id="fixed" type="number" inputmode="numeric" min="0" step="500" value="24000"><span>kr.</span></div>
+            </div>
+            <div>
+              <label for="usage">Forbrug pr. år</label>
+              <div class="field"><input id="usage" type="number" inputmode="numeric" min="0" step="500" value="12000"><span>kr.</span></div>
+            </div>
+          </div>
+          <table class="families">
+            <thead><tr><th>Navn</th><th>Ejerandel %</th><th>Dage pr. år</th><th></th></tr></thead>
+            <tbody data-rows></tbody>
+          </table>
+          <button class="linkbtn" type="button" data-add>+ Tilføj familie</button>
+        </div>
+        <div class="out" aria-live="polite">
+          <div>Hver families andel</div>
+          <table class="result">
+            <thead><tr><th>Navn</th><th style="text-align:right">Pr. år</th><th style="text-align:right">Pr. måned</th></tr></thead>
+            <tbody data-result></tbody>
+          </table>
+          <small data-out="note"></small>
+        </div>
+      </div>
+      <p class="center" style="margin-top:20px"><a class="download" href="udgiftsfordeling-sommerhus.xlsx" download>Hent Excel-skabelonen</a></p>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap narrow article">
+      <h2 style="margin-top:0">Tre måder at dele på</h2>
+      <table>
+        <thead><tr><th>Model</th><th>Godt når</th><th>Ulempe</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Alt deles lige</strong></td><td>I ejer lige meget og bruger huset nogenlunde lige meget</td><td>Føles uretfærdigt, hvis én familie bor der hele sommeren</td></tr>
+          <tr><td><strong>Alt efter ejerandel</strong></td><td>Ejerandelene er forskellige</td><td>Tager ikke højde for, hvem der faktisk bruger huset</td></tr>
+          <tr><td><strong>Faste efter ejerandel, forbrug efter brug</strong></td><td>De fleste familier – det er den mest retfærdige</td><td>Kræver, at I holder styr på dage eller målere</td></tr>
+        </tbody>
+      </table>
+
+      <h2>Faste udgifter</h2>
+      <p>Det er udgifter, der kommer, uanset om huset bruges eller ej:</p>
+      <ul>
+        <li>ejendomsskat (grundskyld og ejendomsværdiskat)</li>
+        <li>forsikring</li>
+        <li>faste afgifter til el, vand og renovation</li>
+        <li>skorstensfejer og grundejerforening</li>
+        <li>afdrag og renter, hvis I har lån i huset</li>
+        <li>en fast opsparing til vedligehold, fx tag, maling og terrasse</li>
+      </ul>
+
+      <h2>Forbrug</h2>
+      <p>Det, der afhænger af brugen: el, vand, varme, brænde, rengøring og fælles indkøb som toiletpapir og opvaskemiddel. Der er tre almindelige måder at fordele det på:</p>
+      <ol>
+        <li><strong>Efter antal dage</strong> i huset – nemt og ofte godt nok.</li>
+        <li><strong>Efter målerne:</strong> aflæs el og vand ved ankomst og afrejse. Hyttio har en måler-fane, der viser forbruget.</li>
+        <li><strong>Hver betaler sit eget:</strong> fx køber man selv brænde og fylder op efter sig.</li>
+      </ol>
+
+      <h2>Undgå de typiske konflikter</h2>
+      <ul>
+        <li><strong>Gem alle kvitteringer ét sted,</strong> som alle kan se.</li>
+        <li><strong>Gør regnskabet op fast,</strong> fx hvert kvartal eller efter sommerferien – ikke når nogen bliver sure.</li>
+        <li><strong>Aftal en beløbsgrænse</strong> for, hvad man må købe uden at spørge de andre.</li>
+        <li><strong>Hav en fælles konto</strong> til de faste udgifter, så én ikke lægger ud for alt.</li>
+      </ul>
+
+      <h2>Lad appen regne</h2>
+      <p>I <a href="./">Hyttio</a> lægger hver af jer jeres udgifter ind, gerne med foto af kvitteringen. Appen viser hele tiden, hvem der skylder hvem, og foreslår de færreste overførsler, der gør jer kvit. Udgifter kan deles ligeligt mellem alle eller kun mellem nogle af jer, og I kan regne i danske, svenske og norske kroner samt euro.</p>
+      <p><a class="download" href="https://apps.apple.com/app/id6828492052">Hent Hyttio gratis</a></p>
+
+      <p class="muted" style="margin-top:32px">Beregneren er vejledende. Aftal fordelingen skriftligt, gerne i en samejeoverenskomst. Se også <a href="dele-sommerhus.html">10 ting I skal aftale, når I deler sommerhus</a>.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap narrow">
+      <h2>Slut med "hvem skylder hvem?"</h2>
+      <p>Hyttio holder regnskabet for jer – gratis.</p>
+      <a class="btn" href="https://apps.apple.com/app/id6828492052">Hent gratis i App Store</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Hyttio</span>
+    <a href="./">Forside</a>
+    <a href="dele-sommerhus.html">Dele sommerhus</a>
+    <a href="tjekliste-sommerhus.html">Tjekliste</a>
+    <a href="husregler-skabelon.html">Husregler-skabelon</a>
+    <a href="dele-hytte.html" hreflang="nb">Dele hytte (norsk)</a>
+    <a href="privacy.html">Privatlivspolitik</a>
+  </div>
+</footer>
+<script src="calc.js"></script>
+</body>
+</html>
