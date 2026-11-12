@@ -197,3 +197,13 @@ footer .spacer { flex: 1; }
   .checklist li { padding: 5px 0; }
   a { color: #000; text-decoration: none; }
 }
+
+/* Sprogvælger i toppen og banner med forslag om eget sprog */
+.langs { display: flex; gap: 2px; font-size: 13px; font-weight: 600; }
+.langs a { color: #9fb4e6; text-decoration: none; padding: 4px 6px; border-radius: 6px; }
+.langs a:hover { color: #fff; }
+.langs a[aria-current] { color: #fff; background: rgba(255, 255, 255, 0.14); }
+@media (max-width: 420px) { .langs a { padding: 4px 3px; } .top .wrap { gap: 10px; } }
+.langbar { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; justify-content: center; background: var(--yellow); color: #1d1d1f; font-size: 15px; padding: 9px 44px 9px 16px; position: relative; }
+.langbar a { color: #081840; font-weight: 700; }
+.langbar button { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: 0; font-size: 16px; cursor: pointer; color: #1d1d1f; }

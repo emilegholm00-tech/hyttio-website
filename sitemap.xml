@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://emilegholm00-tech.github.io/hyttio-website/</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://emilegholm00-tech.github.io/hyttio-website/dele-sommerhus.html</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://emilegholm00-tech.github.io/hyttio-website/udgifter-sommerhus.html</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://emilegholm00-tech.github.io/hyttio-website/tjekliste-sommerhus.html</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://emilegholm00-tech.github.io/hyttio-website/husregler-skabelon.html</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://emilegholm00-tech.github.io/hyttio-website/dele-hytte.html</loc><lastmod>2026-11-12</lastmod></url>
-  <url><loc>https://emilegholm00-tech.github.io/hyttio-website/privacy.html</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://hyttio.com/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://hyttio.com/no/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://hyttio.com/sv/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://hyttio.com/en/</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://hyttio.com/dele-sommerhus.html</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://hyttio.com/udgifter-sommerhus.html</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://hyttio.com/tjekliste-sommerhus.html</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://hyttio.com/husregler-skabelon.html</loc><lastmod>2026-11-12</lastmod></url>
+  <url><loc>https://hyttio.com/privacy.html</loc><lastmod>2026-11-12</lastmod></url>
 </urlset>

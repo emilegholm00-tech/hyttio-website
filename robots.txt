@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://emilegholm00-tech.github.io/hyttio-website/sitemap.xml
+Sitemap: https://hyttio.com/sitemap.xml
