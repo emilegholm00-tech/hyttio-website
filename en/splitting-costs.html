@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to split the costs of a shared holiday home – calculator and Excel | Hyttio</title>
+<meta name="description" content="How to split the costs of a holiday home you own together: fixed costs by ownership share and usage by how much each family uses it. Free calculator and Excel template.">
+<meta property="og:title" content="How to split the costs of a shared holiday home">
+<meta property="og:description" content="How to split the costs of a holiday home you own together: fixed costs by ownership share and usage by how much each family uses it. Free calculator and Excel template.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hyttio.com/en/splitting-costs.html">
+<meta property="og:image" content="https://hyttio.com/img/en-3-expenses.jpg">
+<meta property="og:locale" content="en_GB">
+<meta name="apple-itunes-app" content="app-id=6828492052">
+<link rel="icon" href="../img/icon.png">
+<link rel="canonical" href="https://hyttio.com/en/splitting-costs.html">
+<link rel="alternate" hreflang="da" href="https://hyttio.com/udgifter-sommerhus.html">
+<link rel="alternate" hreflang="nb" href="https://hyttio.com/no/utgifter-hytte.html">
+<link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/utgifter-stuga.html">
+<link rel="alternate" hreflang="en" href="https://hyttio.com/en/splitting-costs.html">
+<link rel="alternate" hreflang="x-default" href="https://hyttio.com/en/splitting-costs.html">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "How to split the costs of a shared holiday home",
+      "inLanguage": "en",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "image": "https://hyttio.com/img/en-3-expenses.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Hyttio",
+        "url": "https://hyttio.com/en/"
+      },
+      "mainEntityOfPage": "https://hyttio.com/en/splitting-costs.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hyttio",
+          "item": "https://hyttio.com/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "How to split the costs of a shared holiday home",
+          "item": "https://hyttio.com/en/splitting-costs.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do you split the costs of a shared holiday home?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A common model is to split fixed costs such as property tax and insurance by ownership share, and usage such as electricity, firewood and water by how much each family uses the house."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../en/"><img src="../img/icon.png" alt="">Hyttio</a>
+    <nav>
+      <a href="../en/sharing-a-holiday-home.html">Sharing a home</a>
+      <a href="../en/splitting-costs.html" aria-current="page">Split costs</a>
+      <a href="../en/holiday-home-checklist.html">Checklist</a>
+      <a href="../en/#support">Support</a>
+    </nav>
+    <div class="langs" aria-label="Language"><a href="../udgifter-sommerhus.html" hreflang="da" lang="da">DA</a><a href="../no/utgifter-hytte.html" hreflang="nb" lang="nb">NO</a><a href="../sv/utgifter-stuga.html" hreflang="sv" lang="sv">SV</a><a href="../en/splitting-costs.html" hreflang="en" lang="en" aria-current="true">EN</a></div>
+    <a class="btn small" href="https://apps.apple.com/app/id6828492052">Get the app</a>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <div class="wrap narrow">
+      <h1>How to split the costs of a shared holiday home</h1>
+      <p>Fixed costs by ownership share, usage by how much you use the house. Try the calculator or download the Excel template.</p>
+      <p class="updated">Updated 12 November 2026</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="calc" data-calc>
+        <div class="in">
+          <div class="money">
+            <div>
+              <label for="fixed">Fixed costs per year</label>
+              <div class="field"><input id="fixed" type="number" inputmode="numeric" min="0" step="100"><span>€</span></div>
+            </div>
+            <div>
+              <label for="usage">Usage per year</label>
+              <div class="field"><input id="usage" type="number" inputmode="numeric" min="0" step="100"><span>€</span></div>
+            </div>
+          </div>
+          <table class="families">
+            <thead><tr><th>Name</th><th>Share %</th><th>Days per year</th><th></th></tr></thead>
+            <tbody data-rows></tbody>
+          </table>
+          <button class="linkbtn" type="button" data-add>+ Add family</button>
+        </div>
+        <div class="out" aria-live="polite">
+          <div>Each family’s share</div>
+          <table class="result">
+            <thead><tr><th>Name</th><th style="text-align:right">Per year</th><th style="text-align:right">Per month</th></tr></thead>
+            <tbody data-result></tbody>
+          </table>
+          <small data-out="note"></small>
+        </div>
+      </div>
+      <p class="center" style="margin-top:20px"><a class="download" href="holiday-home-cost-split.xlsx" download>Download the Excel template</a></p>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap narrow article">
+      <h2 style="margin-top:0">Three ways to split</h2>
+      <table>
+        <thead><tr><th>Model</th><th>Works when</th><th>Downside</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Split everything equally</strong></td><td>You own and use the house about equally</td><td>Feels unfair if one family is there all summer</td></tr>
+          <tr><td><strong>Everything by ownership share</strong></td><td>Ownership shares differ</td><td>Ignores who actually uses the house</td></tr>
+          <tr><td><strong>Fixed by share, usage by use</strong></td><td>Most families – the fairest option</td><td>You need to keep track of days or meters</td></tr>
+        </tbody>
+      </table>
+      <h2>Fixed costs</h2>
+      <ul>
+        <li>property tax</li>
+        <li>insurance</li>
+        <li>standing charges for electricity, water and waste</li>
+        <li>road, owners’ association and chimney sweeping</li>
+        <li>mortgage interest and repayments</li>
+        <li>a regular maintenance fund for the roof, painting and decking</li>
+      </ul>
+      <h2>Usage</h2>
+      <ol>
+        <li><strong>By number of days</strong> in the house – simple and often good enough.</li>
+        <li><strong>By meter readings:</strong> read electricity and water on arrival and departure. Hyttio has a meters tab that shows usage.</li>
+        <li><strong>Everyone pays their own:</strong> for example, you buy firewood and top up after yourself.</li>
+      </ol>
+      <h2>Avoid the usual arguments</h2>
+      <ul>
+        <li><strong>Keep every receipt in one place</strong> that everyone can see.</li>
+        <li><strong>Settle up regularly,</strong> for example every quarter or after the summer.</li>
+        <li><strong>Agree a spending limit</strong> for what can be bought without asking.</li>
+        <li><strong>Have a joint account</strong> for the fixed costs.</li>
+      </ul>
+      <h2>Let the app do the maths</h2>
+      <p>In <a href="./">Hyttio</a> everyone adds their own costs, ideally with a photo of the receipt. The app always shows who owes whom and suggests the fewest transfers to settle up. Costs can be split equally between everyone or just some of you, in euro or Danish, Swedish and Norwegian kroner.</p>
+      <p><a class="download" href="https://apps.apple.com/app/id6828492052">Get Hyttio for free</a></p>
+      <p class="muted" style="margin-top:32px">The calculator is a guide. Agree the split in writing, ideally in your co-ownership agreement. See also <a href="sharing-a-holiday-home.html">10 things to agree on when you share a holiday home</a>.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap narrow">
+      <h2>No more “who owes whom?”</h2>
+      <p>Hyttio keeps the accounts for you – for free.</p>
+      <a class="btn" href="https://apps.apple.com/app/id6828492052">Download free on the App Store</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Hyttio</span>
+    <a href="../en/sharing-a-holiday-home.html">Sharing a home</a> <a href="../en/splitting-costs.html">Split costs</a> <a href="../en/holiday-home-checklist.html">Checklist</a> <a href="../en/house-rules-template.html">House rules</a>
+    <a href="../privacy.html">Privacy policy</a>
+    <span class="spacer"></span>
+    <a href="../" hreflang="da">Dansk</a> <a href="../no/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../en/" hreflang="en">English</a>
+  </div>
+</footer>
+<script src="../calc.js"></script>
+<script src="../lang.js"></script>
+</body>
+</html>
