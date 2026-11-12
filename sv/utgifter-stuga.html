@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fördelning av utgifter i en delad stuga – kalkylator och Excel | Hyttio</title>
+<meta name="description" content="Så fördelar ni utgifterna för en stuga ni äger tillsammans: fasta kostnader efter ägarandel och förbrukning efter användning. Gratis kalkylator och Excel-mall.">
+<meta property="og:title" content="Så fördelar ni utgifterna i en delad stuga">
+<meta property="og:description" content="Så fördelar ni utgifterna för en stuga ni äger tillsammans: fasta kostnader efter ägarandel och förbrukning efter användning. Gratis kalkylator och Excel-mall.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://hyttio.com/sv/utgifter-stuga.html">
+<meta property="og:image" content="https://hyttio.com/img/sv-3-expenses.jpg">
+<meta property="og:locale" content="sv_SE">
+<meta name="apple-itunes-app" content="app-id=6828492052">
+<link rel="icon" href="../img/icon.png">
+<link rel="canonical" href="https://hyttio.com/sv/utgifter-stuga.html">
+<link rel="alternate" hreflang="da" href="https://hyttio.com/udgifter-sommerhus.html">
+<link rel="alternate" hreflang="nb" href="https://hyttio.com/no/utgifter-hytte.html">
+<link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/utgifter-stuga.html">
+<link rel="alternate" hreflang="en" href="https://hyttio.com/en/splitting-costs.html">
+<link rel="alternate" hreflang="x-default" href="https://hyttio.com/en/splitting-costs.html">
+<link rel="stylesheet" href="../style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "Så fördelar ni utgifterna i en delad stuga",
+      "inLanguage": "sv",
+      "datePublished": "2026-11-12",
+      "dateModified": "2026-11-12",
+      "image": "https://hyttio.com/img/sv-3-expenses.jpg",
+      "author": {
+        "@type": "Organization",
+        "name": "Hyttio",
+        "url": "https://hyttio.com/sv/"
+      },
+      "mainEntityOfPage": "https://hyttio.com/sv/utgifter-stuga.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Hyttio",
+          "item": "https://hyttio.com/sv/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Så fördelar ni utgifterna i en delad stuga",
+          "item": "https://hyttio.com/sv/utgifter-stuga.html"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Hur fördelar man utgifterna i en delad stuga?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "En vanlig modell är att fördela fasta kostnader som fastighetsavgift och försäkring efter ägarandel, medan förbrukning som el, ved och vatten fördelas efter hur mycket varje familj använder stugan."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="../sv/"><img src="../img/icon.png" alt="">Hyttio</a>
+    <nav>
+      <a href="../sv/dela-stuga.html">Dela stuga</a>
+      <a href="../sv/utgifter-stuga.html" aria-current="page">Fördela utgifter</a>
+      <a href="../sv/checklista-stuga.html">Checklista</a>
+      <a href="../sv/#support">Hjälp</a>
+    </nav>
+    <div class="langs" aria-label="Language"><a href="../udgifter-sommerhus.html" hreflang="da" lang="da">DA</a><a href="../no/utgifter-hytte.html" hreflang="nb" lang="nb">NO</a><a href="../sv/utgifter-stuga.html" hreflang="sv" lang="sv" aria-current="true">SV</a><a href="../en/splitting-costs.html" hreflang="en" lang="en">EN</a></div>
+    <a class="btn small" href="https://apps.apple.com/app/id6828492052">Hämta</a>
+  </div>
+</header>
+
+<main>
+  <div class="page-head">
+    <div class="wrap narrow">
+      <h1>Så fördelar ni utgifterna i en delad stuga</h1>
+      <p>Fasta kostnader efter ägarandel, förbrukning efter hur mycket ni använder stugan. Prova kalkylatorn eller ladda ner Excel-mallen.</p>
+      <p class="updated">Uppdaterad 12 november 2026</p>
+    </div>
+  </div>
+
+  <section>
+    <div class="wrap">
+      <div class="calc" data-calc>
+        <div class="in">
+          <div class="money">
+            <div>
+              <label for="fixed">Fasta kostnader per år</label>
+              <div class="field"><input id="fixed" type="number" inputmode="numeric" min="0" step="100"><span>kr</span></div>
+            </div>
+            <div>
+              <label for="usage">Förbrukning per år</label>
+              <div class="field"><input id="usage" type="number" inputmode="numeric" min="0" step="100"><span>kr</span></div>
+            </div>
+          </div>
+          <table class="families">
+            <thead><tr><th>Namn</th><th>Ägarandel %</th><th>Dagar per år</th><th></th></tr></thead>
+            <tbody data-rows></tbody>
+          </table>
+          <button class="linkbtn" type="button" data-add>+ Lägg till familj</button>
+        </div>
+        <div class="out" aria-live="polite">
+          <div>Varje familjs andel</div>
+          <table class="result">
+            <thead><tr><th>Namn</th><th style="text-align:right">Per år</th><th style="text-align:right">Per månad</th></tr></thead>
+            <tbody data-result></tbody>
+          </table>
+          <small data-out="note"></small>
+        </div>
+      </div>
+      <p class="center" style="margin-top:20px"><a class="download" href="utgiftsfordelning-stuga.xlsx" download>Ladda ner Excel-mallen</a></p>
+    </div>
+  </section>
+
+  <section class="soft">
+    <div class="wrap narrow article">
+      <h2 style="margin-top:0">Tre sätt att dela</h2>
+      <table>
+        <thead><tr><th>Modell</th><th>Passar när</th><th>Nackdel</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Allt delas lika</strong></td><td>Ni äger och använder stugan ungefär lika mycket</td><td>Känns orättvist om en familj är där hela sommaren</td></tr>
+          <tr><td><strong>Allt efter ägarandel</strong></td><td>Ägarandelarna är olika</td><td>Tar inte hänsyn till vem som faktiskt använder stugan</td></tr>
+          <tr><td><strong>Fasta efter ägarandel, förbrukning efter användning</strong></td><td>De flesta familjer – den mest rättvisa</td><td>Kräver att ni håller koll på dagar eller mätare</td></tr>
+        </tbody>
+      </table>
+      <h2>Fasta kostnader</h2>
+      <ul>
+        <li>fastighetsavgift</li>
+        <li>försäkring</li>
+        <li>fasta avgifter för el, vatten och avlopp</li>
+        <li>vägavgift och samfällighet</li>
+        <li>sotning och sophämtning</li>
+        <li>räntor och amortering om ni har lån</li>
+        <li>ett fast sparande till underhåll, till exempel tak, målning och altan</li>
+      </ul>
+      <h2>Förbrukning</h2>
+      <ol>
+        <li><strong>Efter antal dagar</strong> i stugan – enkelt och ofta tillräckligt.</li>
+        <li><strong>Efter mätarna:</strong> läs av el och vatten vid ankomst och avresa. Hyttio har en mätarflik som visar förbrukningen.</li>
+        <li><strong>Var och en betalar sitt:</strong> till exempel köper man själv ved och fyller på efter sig.</li>
+      </ol>
+      <h2>Undvik de vanliga konflikterna</h2>
+      <ul>
+        <li><strong>Samla alla kvitton på ett ställe</strong> som alla kan se.</li>
+        <li><strong>Gör upp regelbundet,</strong> till exempel varje kvartal eller efter sommaren.</li>
+        <li><strong>Bestäm en beloppsgräns</strong> för vad man får köpa utan att fråga.</li>
+        <li><strong>Ha ett gemensamt konto</strong> för de fasta kostnaderna.</li>
+      </ul>
+      <h2>Låt appen räkna</h2>
+      <p>I <a href="./">Hyttio</a> lägger var och en in sina utgifter, gärna med foto på kvittot. Appen visar hela tiden vem som är skyldig vem och föreslår så få överföringar som möjligt. Utgifter kan delas lika mellan alla eller bara mellan några av er, i svenska, norska och danska kronor eller euro.</p>
+      <p><a class="download" href="https://apps.apple.com/app/id6828492052">Hämta Hyttio gratis</a></p>
+      <p class="muted" style="margin-top:32px">Kalkylatorn är vägledande. Kom överens om fördelningen skriftligt, gärna i samäganderättsavtalet. Se även <a href="dela-stuga.html">10 saker att komma överens om när ni delar stuga</a>.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap narrow">
+      <h2>Slut på ”vem är skyldig vem?”</h2>
+      <p>Hyttio håller koll på ekonomin åt er – gratis.</p>
+      <a class="btn" href="https://apps.apple.com/app/id6828492052">Hämta gratis i App Store</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Hyttio</span>
+    <a href="../sv/dela-stuga.html">Dela stuga</a> <a href="../sv/utgifter-stuga.html">Fördela utgifter</a> <a href="../sv/checklista-stuga.html">Checklista</a> <a href="../sv/husregler-mall.html">Husregler</a>
+    <a href="../privacy.html">Integritet (danska)</a>
+    <span class="spacer"></span>
+    <a href="../" hreflang="da">Dansk</a> <a href="../no/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../en/" hreflang="en">English</a>
+  </div>
+</footer>
+<script src="../calc.js"></script>
+<script src="../lang.js"></script>
+</body>
+</html>
