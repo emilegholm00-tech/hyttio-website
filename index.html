@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hyttio – app til delt sommerhus og fælles hytte</title>
 <meta name="description" content="Gratis iPhone-app til familier og venner, der deler sommerhus eller hytte: fælles bookingkalender, deling af udgifter, opgaver, indkøbsliste og husbog.">
-<meta property="og:title" content="Hyttio – del sommerhuset uden kaos">
-<meta property="og:description" content="Gratis app til jer, der deler et sommerhus: fælles kalender, udgifter, opgaver og husbog ét sted.">
+<meta property="og:title" content="Hvem har sommerhuset næste weekend?">
+<meta property="og:description" content="Hyttio er sommerhusets fælles kalender, regnskab og husbog. Gratis til iPhone.">
 <meta property="og:image" content="https://hyttio.com/img/og-da.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -26,9 +26,9 @@
 <link rel="icon" href="img/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
-<meta name="theme-color" content="#F4F2ED" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#10181D" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="style.css">
+<meta name="theme-color" content="#2E4A5C">
+<link rel="stylesheet" href="home.css">
+<script>document.documentElement.classList.add("js")</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -36,10 +36,13 @@
   "name": "Hyttio: Delt sommerhus & hytte",
   "operatingSystem": "iOS",
   "applicationCategory": "LifestyleApplication",
-  "inLanguage": ["da", "nb", "sv", "en"],
+  "inLanguage": "da",
   "url": "https://apps.apple.com/app/id6828492052",
-  "sameAs": "https://hyttio.com/",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "DKK" }
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "DKK"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -47,160 +50,233 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Hvad koster Hyttio?", "acceptedAnswer": { "@type": "Answer", "text": "Hyttio er gratis for alle i huset. Der er ingen reklamer, og du behøver ikke oprette en konto." } },
-    { "@type": "Question", "name": "Skal alle i familien have iPhone?", "acceptedAnswer": { "@type": "Answer", "text": "Ja, Hyttio findes til iPhone, og alle, der skal bruge appen, skal være logget ind i iCloud. Kalenderen kan dog vises i Google Kalender og Outlook." } },
-    { "@type": "Question", "name": "Hvor gemmes vores data?", "acceptedAnswer": { "@type": "Answer", "text": "Alt gemmes i iCloud hos Apple og deles kun med dem, I inviterer. Udvikleren kan ikke se jeres data." } }
+    {
+      "@type": "Question",
+      "name": "Hvad koster Hyttio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hyttio er gratis for alle i huset. Der er ingen reklamer, og du behøver ikke oprette en konto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Skal alle i familien have iPhone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja, Hyttio findes til iPhone, og alle skal være logget ind i iCloud. Bookingerne kan dog også vises i Google Kalender og Outlook, så resten af familien kan se, hvornår huset er optaget."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvordan inviterer jeg de andre?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Gå til fanen Huset og tryk på \"Lav invitationslink\". Send linket på SMS, Messenger eller mail. Den, der modtager det, åbner linket på sin iPhone med Hyttio installeret og er med i huset."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Hvor gemmes vores data?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Alt gemmes i jeres iCloud hos Apple og deles kun med dem, I inviterer. Vi har ingen server og kan ikke se jeres data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Kan vi have flere huse?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Under Huset, Indstillinger, Dine huse kan du skifte mellem huse eller oprette et nyt."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Virker det også for en hytte i Norge eller en stuga i Sverige?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ja. Hyttio findes på dansk, norsk, svensk og engelsk og kan regne i danske, norske og svenske kroner samt euro."
+      }
+    }
   ]
 }
 </script>
 </head>
-<body>
+<body class="home">
 
-<header class="top">
+<header class="bar" data-bg="fjord">
   <div class="wrap">
-    <a class="brand" href="./"><img src="img/icon.png" alt="">Hyttio</a>
+    <a class="logo" href=""><img src="img/icon.png" alt="" width="34" height="34">Hyttio</a>
     <nav>
       <a href="#saadan">Sådan virker det</a>
-      <a href="dele-sommerhus.html">Dele sommerhus</a>
-      <a href="udgifter-sommerhus.html">Fordel udgifterne</a>
-      <a href="tjekliste-sommerhus.html">Tjekliste</a>
-      <a href="#support">Support</a>
+      <a href="#guides">Guides</a>
+      <a href="#support">Spørgsmål</a>
     </nav>
-    <div class="langs" aria-label="Language"><a href="./" hreflang="da" lang="da" aria-current="true">DA</a><a href="no/" hreflang="nb" lang="nb">NO</a><a href="sv/" hreflang="sv" lang="sv">SV</a><a href="en/" hreflang="en" lang="en">EN</a></div>
-    <a class="btn small" href="https://apps.apple.com/app/id6828492052">Hent appen</a>
+    <div class="langs" aria-label="Language"><a href="" hreflang="da" lang="da" aria-current="true">DA</a><a href="no/" hreflang="nb" lang="nb">NO</a><a href="sv/" hreflang="sv" lang="sv">SV</a><a href="en/" hreflang="en" lang="en">EN</a></div>
+    <a class="pill" href="https://apps.apple.com/app/id6828492052">Hent Hyttio</a>
   </div>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero theme-fjord" data-bg="fjord">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <h1>Hvem har huset næste weekend?</h1>
+        <p class="lead">Hyttio er en gratis iPhone-app til jer, der deler sommerhus eller hytte: én kalender, ét regnskab og én husbog. Så slipper I for at lede i en SMS-tråd fra 2019.</p>
+        <a class="store" href="https://apps.apple.com/app/id6828492052">Hent Hyttio i App Store</a>
+        <p class="note">Gratis og uden reklamer. Alle i huset skal have iPhone, men bookingerne kan også ses i Google Kalender.</p>
+      </div>
+      <div class="hero-phone">
+        <div class="phone" role="img" aria-label="Hyttio på iPhone: Huset i Hornbæk med næste ophold, saldo og åbne opgaver.">
+          <div class="app" aria-hidden="true">
+            <div class="app-hero"><span class="sunball"></span><small>Hej Emil</small><b>Huset i Hornbæk</b><small>Strandvejen 1, 3100 Hornbæk</small></div>
+            <div class="app-acts"><span class="act"><i style="background:#2E4A5C;color:#FFFFFF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></i>Book</span><span class="act"><i style="background:#7FA7B8;color:#1D2A33"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3"/><path d="M2.5 10h19M6.5 15h4"/></svg></i>Udgift</span><span class="act"><i style="background:#D9A441;color:#1D2A33"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="7" r="2"/><circle cx="5.5" cy="17" r="2"/><path d="M10 7h10M10 17h10"/></svg></i>Opgave</span><span class="act"><i style="background:#36566A;color:#FFFFFF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></i>Besked</span></div>
+            <div class="app-card app-next"><span class="days"><b>5</b>dage</span><span><small>Næste ophold</small><b>Sofie kommer</b><small>15.–18. nov., 3 nætter</small></span></div>
+            <div class="app-card app-bal"><small>Din saldo</small><b>Du skylder 1.350,00 kr.</b></div>
+            <div class="app-card app-tasks"><b>Åbne opgaver</b><span class="task"><i class="ring" style="border-color:#7FA7B8"></i>Rens tagrender</span><span class="task"><i class="ring" style="border-color:#2E4A5C"></i>Mal hegnet</span><span class="task"><i class="ring" style="border-color:#D9A441"></i>Slå græs</span></div>
+            <div class="tabbar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3"/><path d="M2.5 10h19M6.5 15h4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="7" r="2"/><circle cx="5.5" cy="17" r="2"/><path d="M10 7h10M10 17h10"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg></div>
+          </div>
+        </div>
+        <p class="ping p0"><i class="dot" style="background:#2E4A5C"></i><span><b>Sofie</b> har booket 15.–18. november</span></p>
+        <p class="ping p1"><i class="dot" style="background:#7FA7B8"></i><span><b>Emil</b> har lagt 1.200 kr. ud til brænde</span></p>
+        <p class="ping p2"><i class="dot" style="background:#D9A441"></i><span><b>Jonas</b> har slået græsset</span></p>
+      </div>
+    </div>
     <div class="wrap">
-      <div>
-        <h1>Del sommerhuset – <span class="hl">uden kaos</span></h1>
-        <p class="lead">Hyttio samler alt det, I skal holde styr på, når I er flere om et sommerhus eller en hytte: hvem der er der hvornår, hvem der har betalt hvad, og hvad der skal ordnes.</p>
-        <div class="pills"><span class="pill">Fælles kalender</span><span class="pill">Udgifter</span><span class="pill">Opgaver</span><span class="pill">Husbog</span></div>
-        <a class="btn" href="https://apps.apple.com/app/id6828492052">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16"/></svg>
-          Hent gratis i App Store
-        </a>
-        <p class="note">Til iPhone · Gratis for hele familien · Uden reklamer · Ingen konto</p>
+      <ul class="strip">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><b>Én kalender</b>Ingen dobbeltbookinger</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3"/><path d="M2.5 10h19M6.5 15h4"/></svg><span><b>Udgifter</b>Hvem skylder hvem</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="7" r="2"/><circle cx="5.5" cy="17" r="2"/><path d="M10 7h10M10 17h10"/></svg><span><b>Opgaver</b>Med navn og deadline</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg><span><b>Husbog</b>Nøgle, wifi og affald</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="say theme-deep" id="saadan" data-bg="deep">
+    <div class="wrap">
+      <h2>Alt det, I siger til hinanden om huset.</h2>
+      <p>Emil, Sofie og Jonas deler Huset i Hornbæk med deres familier. Det er et eksempel, men spørgsmålene er de samme i alle huse, der deles. Tryk på et af dem, og se, hvordan Hyttio svarer.</p>
+      <ul class="cloud"><li><a href="#januar">Kan vi få huset i uge 29?</a></li><li><a href="#april">Hvem slår græsset i år?</a></li><li><a href="#juli">Hvor ligger nøglen?</a></li><li><a href="#oktober">Jeg har lagt 1.200 kr. ud til brænde.</a></li><li><a href="#november">Hvem skylder hvem?</a></li></ul>
+    </div>
+  </section>
+
+  <section class="story theme-sun" id="januar" data-bg="sun">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Sofie, i januar</p>
+        <h2>“Kan vi få huset i uge 29?”</h2>
+        <p>Hver familie har sin farve i kalenderen. Sofie kan se, at uge 29 er ledig, og booker den med to tryk. Emil og Jonas får besked, og ingen andre kan booke den samme uge.</p>
       </div>
-      <div class="phone shot">
-        <div class="screen">
-          <img src="img/app-home.webp" width="600" height="1304" alt="Hyttio på iPhone: næste ophold, saldo og åbne opgaver i Huset i Hornbæk">
+      <div class="story-ui reveal">
+        <div class="ui ui-booking">
+          <div class="ui-head"><b>Ny booking</b><span>Prøv: tryk på knappen</span></div>
+          <div class="weeks"><span class="wk" style="background:#7FA7B8;color:#1D2A33"><b>27</b>Emil</span><span class="wk" style="background:#D9A441;color:#1D2A33"><b>28</b>Jonas</span><span class="wk free"><b>29</b>Ledig</span><span class="wk" style="background:#7FA7B8;color:#1D2A33"><b>30</b>Emil</span></div>
+          <div class="rows"><div class="row"><span>Hvem</span><span><i class="dot" style="background:#2E4A5C"></i>Sofie</span></div><div class="row"><span>Ankomst</span><span>Lør. 18. juli</span></div><div class="row"><span>Afrejse</span><span>Lør. 25. juli</span></div><div class="row"><span>Personer</span><span>4</span></div></div>
+          <button class="ui-btn" type="button" data-book data-who="Sofie" data-color="#2E4A5C">Book uge 29</button>
+          <p class="ui-toast" data-done hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Booket. Emil og Jonas har fået besked.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="saadan">
-    <div class="wrap center">
-      <h2>Klar på fem minutter</h2>
-      <p class="muted">Hyttio er lavet til søskende, familier og venner, der ejer eller lejer et sommerhus, en hytte eller et kolonihavehus sammen.</p>
-      <div class="grid3" style="text-align:left">
-        <div class="card">
-          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div>
-          <h3>1. Opret huset</h3>
-          <p>Giv huset et navn, skriv hvem I er, og vælg en farve til hver familie.</p>
-        </div>
-        <div class="card">
-          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
-          <h3>2. Invitér de andre</h3>
-          <p>Send et link på Beskeder eller mail. De andre trykker på det og er med. Ingen konto, kun iCloud.</p>
-        </div>
-        <div class="card">
-          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
-          <h3>3. Book og del</h3>
-          <p>Book med to tryk, læg udgifter ind, og se med det samme, hvem der skylder hvem.</p>
+  <section class="story theme-mist flip" id="april" data-bg="mist">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Jonas, i april</p>
+        <h2>“Hvem slår græsset i år?”</h2>
+        <p>Opgaver får et navn og en deadline. Det, der skal gøres hvert år, kommer igen af sig selv, så ingen skal huske at huske det.</p>
+      </div>
+      <div class="story-ui reveal">
+        <div class="ui ui-tasks">
+          <div class="ui-head"><b>Opgaver</b><span>Prøv: sæt flueben</span></div>
+          <ul><li><button type="button" class="tick" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="t"><b>Slå græs</b><span><i class="dot" style="background:#D9A441"></i>Jonas, hver 14. dag</span></span></button></li><li><button type="button" class="tick" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="t"><b>Rens tagrender</b><span><i class="dot" style="background:#7FA7B8"></i>Emil, 1. maj</span></span></button></li><li><button type="button" class="tick" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="t"><b>Bestil skorstensfejer</b><span><i class="dot" style="background:#2E4A5C"></i>Sofie, 15. maj</span></span></button></li><li><button type="button" class="tick" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="t"><b>Åbn for vandet</b><span><i class="dot" style="background:#D9A441"></i>Jonas, før påske</span></span></button></li></ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="soft">
-    <div class="wrap split">
-      <div>
-        <h2>Én kalender – ingen dobbeltbookinger</h2>
-        <p class="muted">Alle kan se, hvornår huset er ledigt. Hver familie har sin egen farve, og Hyttio advarer, hvis to booker samme weekend.</p>
-        <ul class="ticks">
-          <li>Book ankomst og afrejse med to tryk</li>
-          <li>Antal personer og en note på hver booking</li>
-          <li>Kalenderen kan vises i iPhone-kalenderen, Google Kalender og Outlook</li>
-          <li>Påmindelse, før det er jeres tur</li>
-        </ul>
+  <section class="story theme-deep" id="juli" data-bg="deep">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Gæsterne, i juli</p>
+        <h2>“Hvor ligger nøglen?”</h2>
+        <p>Husbogen har svaret: nøgleboksen, wifi, hovedhanen og hvornår skraldet hentes. Med billeder, så den næste ikke skal ringe og spørge.</p>
       </div>
-      <div class="pics">
-        <img src="img/app-calendar.webp" width="600" height="1304" alt="Fælles bookingkalender med en farve pr. familie" loading="lazy">
-        <img src="img/app-expenses.webp" width="600" height="1304" alt="Udgifter og saldo: hvem skylder hvem" loading="lazy">
+      <div class="story-ui reveal">
+        <div class="ui ui-guide">
+          <div class="ui-head"><b>Husbog</b></div>
+          <div class="rows"><div class="row col"><b>Nøgleboks</b><span>Ved bryggersdøren. Koden står i husbogen.</span></div><div class="row col"><b>Wifi</b><span>Net: HusetiHornbaek</span></div><div class="row col"><b>Hovedhane</b><span>I bryggerset bag vaskemaskinen</span></div><div class="row col"><b>Skrald</b><span>Hentes tirsdag i lige uger</span></div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="wrap split">
-      <div>
-        <h2>Pengene uden pinlige samtaler</h2>
-        <p class="muted">Læg kvitteringen for brænde, forsikring eller nyt køleskab ind, så regner Hyttio ud, hvem der skylder hvem – og med færrest mulige overførsler.</p>
-        <ul class="ticks">
-          <li>Del ligeligt mellem alle eller kun mellem nogle af jer</li>
-          <li>Danske, svenske og norske kroner samt euro</li>
-          <li>Foto af kvitteringen på hver udgift</li>
-          <li>Markér som betalt, når I har overført</li>
-        </ul>
-        <p style="margin-top:20px"><a href="udgifter-sommerhus.html">Prøv beregneren: Sådan fordeler I udgifterne →</a></p>
+  <section class="story theme-soft flip" id="oktober" data-bg="soft">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Emil, i oktober</p>
+        <h2>“Jeg har lagt 1.200 kr. ud til brænde.”</h2>
+        <p>Emil tager et billede af kvitteringen og lægger udgiften ind. Hyttio deler den mellem dem, der skal betale, og saldoen passer med det samme.</p>
       </div>
-      <div class="card">
-        <h3>Det hele ét sted</h3>
-        <ul class="ticks">
-          <li><strong>Opgaver</strong> med ansvarlig, deadline og gentagelse – fx "Slå græs" hver 14. dag</li>
-          <li><strong>Indkøbsliste</strong>, så kaffen og toiletpapiret aldrig slipper op</li>
-          <li><strong>El og vand</strong>: aflæs målerne og se forbruget</li>
-          <li><strong>Husbog</strong> med nøgleboks, wifi, sikringer og affald – med billeder</li>
-          <li><strong>Kontakter</strong> til VVS, elektriker og nabo</li>
-          <li><strong>Opslagstavle</strong> til beskeder til hinanden</li>
-        </ul>
+      <div class="story-ui reveal">
+        <div class="ui ui-expense">
+          <div class="receipt-top">
+            <div><b>Brænde til pejsen</b><span>Betalt af Emil, 14. okt.</span></div>
+            <b class="amount">1.200,00 kr.</b>
+          </div>
+          <div class="tags"><span>Deles mellem 3</span><span>400,00 kr. hver</span><span>Kvittering vedhæftet</span></div>
+          <p class="rows-h">Saldo nu</p>
+          <div class="rows"><div class="row"><i class="dot" style="background:#2E4A5C"></i><span class="name">Sofie</span><span class="plus">Har 1.500,00 kr. til gode</span></div><div class="row"><i class="dot" style="background:#7FA7B8"></i><span class="name">Emil</span><span class="minus">Skylder 1.350,00 kr.</span></div><div class="row"><i class="dot" style="background:#D9A441"></i><span class="name">Jonas</span><span class="minus">Skylder 150,00 kr.</span></div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="soft">
-    <div class="wrap center">
-      <h2>Se Hyttio</h2>
-      <div class="shots" tabindex="0" aria-label="Billeder fra appen">
-        <figure><div class="screen"><img src="img/screen-da-1-home.webp" alt="Hele familiens sommerhus" loading="lazy" width="600" height="1339"></div><figcaption><strong>Hele familiens sommerhus</strong>samlet ét sted</figcaption></figure>
-        <figure><div class="screen"><img src="img/screen-da-2-calendar.webp" alt="Fælles bookingkalender" loading="lazy" width="600" height="1339"></div><figcaption><strong>Fælles bookingkalender</strong>book med to tryk</figcaption></figure>
-        <figure><div class="screen"><img src="img/screen-da-3-expenses.webp" alt="Del udgifterne retfærdigt" loading="lazy" width="600" height="1339"></div><figcaption><strong>Del udgifterne retfærdigt</strong>se hvem der skylder hvem</figcaption></figure>
-        <figure><div class="screen"><img src="img/screen-da-4-tasks.webp" alt="Fordel opgaverne" loading="lazy" width="600" height="1339"></div><figcaption><strong>Fordel opgaverne</strong>med deadline og gentagelse</figcaption></figure>
-        <figure><div class="screen"><img src="img/screen-da-5-shopping.webp" alt="Fælles indkøbsliste" loading="lazy" width="600" height="1339"></div><figcaption><strong>Fælles indkøbsliste</strong>så kaffen aldrig slipper op</figcaption></figure>
-        <figure><div class="screen"><img src="img/screen-da-6-meters.webp" alt="Hold øje med el og vand" loading="lazy" width="600" height="1339"></div><figcaption><strong>Hold øje med el og vand</strong>aflæs og se forbruget</figcaption></figure>
-        <figure><div class="screen"><img src="img/screen-da-7-guide.webp" alt="Husbog til hytten" loading="lazy" width="600" height="1339"></div><figcaption><strong>Husbog til hytten</strong>nøgle, wifi og affald</figcaption></figure>
+  <section class="story theme-sky" id="november" data-bg="sky">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Alle, i november</p>
+        <h2>“Hvem skylder hvem?”</h2>
+        <p>Hyttio regner det ud og finder den korteste vej til at gøre op. Når pengene er overført, markerer man det som betalt, og så står alle på nul.</p>
+      </div>
+      <div class="story-ui reveal">
+        <div class="ui ui-settle">
+          <div class="ui-head"><b>Gør op</b><span>Prøv: tryk på knappen</span></div>
+          <div class="rows"><div class="row"><i class="dot" style="background:#7FA7B8"></i><span class="name">Emil betaler Sofie</span><b>1.350 kr.</b></div><div class="row"><i class="dot" style="background:#D9A441"></i><span class="name">Jonas betaler Sofie</span><b>150 kr.</b></div></div>
+          <button class="ui-btn" type="button" data-settle data-done-text="Betalt">Markér som betalt</button>
+          <p class="ui-note">To overførsler, og så står alle på nul.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="wrap center">
+  <section class="mid theme-fjord" data-bg="fjord">
+    <div class="wrap">
+      <h2>Klar til jeres eget hus?</h2>
+      <p>Hyttio er gratis. Hent den, opret huset, og send linket til resten af familien.</p>
+      <div class="mid-actions">
+        <a class="store" href="https://apps.apple.com/app/id6828492052">Hent Hyttio i App Store</a>
+        <button class="share" type="button" data-share data-title="Hyttio" data-text="Skal vi bruge Hyttio til huset? Kalender, udgifter og husbog ét sted." data-url="https://hyttio.com/" data-copied="Linket er kopieret. Sæt det ind i jeres tråd.">Send linket til familien</button>
+      </div>
+      <p class="share-note" data-share-note hidden></p>
+    </div>
+  </section>
+
+  <section class="guides theme-deep" id="guides" data-bg="deep">
+    <div class="wrap">
       <h2>Gratis guides til jer, der deler</h2>
-      <div class="grid3" style="text-align:left">
-        <a class="card" href="dele-sommerhus.html" style="text-decoration:none;color:inherit">
-          <h3>10 ting I skal aftale</h3>
-          <p>Booking, økonomi, vedligehold og hvad der sker, hvis én vil sælge. Med gratis husregler-skabelon.</p>
-        </a>
-        <a class="card" href="udgifter-sommerhus.html" style="text-decoration:none;color:inherit">
-          <h3>Fordel udgifterne</h3>
-          <p>Faste udgifter efter ejerandel, forbrug efter antal dage. Beregner og Excel-skabelon.</p>
-        </a>
-        <a class="card" href="tjekliste-sommerhus.html" style="text-decoration:none;color:inherit">
-          <h3>Tjekliste: åbne og lukke</h3>
-          <p>Alt det, der skal huskes, når I kommer og går – og når huset lukkes for vinteren.</p>
-        </a>
-      </div>
-      <p class="muted" style="margin-top:24px">Hyttio på andre sprog: <a href="no/" hreflang="nb" lang="nb">Norsk</a> · <a href="sv/" hreflang="sv" lang="sv">Svenska</a> · <a href="en/" hreflang="en" lang="en">English</a></p>
+      <ul class="guide-list">
+        <li><a href="dele-sommerhus.html"><b>10 ting I skal aftale</b><span>Ejerandele, højsæson, vedligehold og hvad der sker, hvis én vil sælge.</span></a></li>
+        <li><a href="udgifter-sommerhus.html"><b>Fordel udgifterne</b><span>Faste udgifter efter ejerandel, forbrug efter dage. Med beregner og Excel.</span></a></li>
+        <li><a href="tjekliste-sommerhus.html"><b>Tjekliste til huset</b><span>Ankomst, afrejse og vinterlukning, klar til print.</span></a></li>
+        <li><a href="husregler-skabelon.html"><b>Husregler</b><span>En skabelon, I udfylder sammen og hænger op i huset.</span></a></li>
+      </ul>
     </div>
   </section>
 
-  <section id="support" class="soft">
+  <section class="faq theme-deep" id="support" data-bg="deep">
     <div class="wrap narrow">
-      <h2>Spørgsmål og support</h2>
+      <h2>Spørgsmål og svar</h2>
       <details>
         <summary>Hvad koster Hyttio?</summary>
         <p>Hyttio er gratis for alle i huset. Der er ingen reklamer, og du behøver ikke oprette en konto.</p>
@@ -211,50 +287,48 @@
       </details>
       <details>
         <summary>Hvordan inviterer jeg de andre?</summary>
-        <p>Gå til fanen Huset og tryk på "Lav invitationslink". Send linket på SMS, Messenger eller mail. Den, der modtager det, åbner linket på sin iPhone – med Hyttio installeret og logget ind på iCloud – og er med i huset.</p>
+        <p>Gå til fanen Huset og tryk på "Lav invitationslink". Send linket på SMS, Messenger eller mail. Den, der modtager det, åbner linket på sin iPhone med Hyttio installeret og er med i huset.</p>
       </details>
       <details>
         <summary>Hvor gemmes vores data?</summary>
-        <p>Alt gemmes i jeres iCloud hos Apple og deles kun med dem, I inviterer. Vi har ingen server og kan ikke se jeres data. <a href="privacy.html">Læs privatlivspolitikken</a>.</p>
+        <p>Alt gemmes i jeres iCloud hos Apple og deles kun med dem, I inviterer. Vi har ingen server og kan ikke se jeres data.</p>
       </details>
       <details>
         <summary>Kan vi have flere huse?</summary>
-        <p>Ja. Under Huset → Indstillinger → Dine huse kan du skifte mellem huse eller oprette et nyt.</p>
+        <p>Ja. Under Huset, Indstillinger, Dine huse kan du skifte mellem huse eller oprette et nyt.</p>
       </details>
       <details>
         <summary>Virker det også for en hytte i Norge eller en stuga i Sverige?</summary>
         <p>Ja. Hyttio findes på dansk, norsk, svensk og engelsk og kan regne i danske, norske og svenske kroner samt euro.</p>
       </details>
-      <details>
-        <summary>Jeg kan ikke finde Hyttio i App Store</summary>
-        <p>Hyttio er til iPhone med iOS 18 eller nyere. Søg efter "Hyttio", eller brug knappen øverst på siden.</p>
-      </details>
-      <p style="margin-top:28px">Har du andre spørgsmål, ideer eller problemer, så skriv til <a href="mailto:support@hyttio.com">support@hyttio.com</a>.</p>
+      <p class="support">Andre spørgsmål? Skriv til <a href="mailto:support@hyttio.com">support@hyttio.com</a>. <a href="privacy.html">Privatlivspolitik</a>.</p>
     </div>
   </section>
 
-  <section class="cta">
-    <div class="wrap narrow">
-      <h2>Mere sommerhus, mindre logistik</h2>
-      <p>Hent Hyttio gratis og invitér resten af familien på et øjeblik.</p>
-      <a class="btn" href="https://apps.apple.com/app/id6828492052">Hent gratis i App Store</a>
+  <section class="end theme-fjord" data-bg="fjord">
+    <div class="wrap">
+      <h2>Mere tid i huset. Mindre tid i tråden.</h2>
+      <p>Hent Hyttio, opret huset, og send linket til resten af familien.</p>
+      <a class="store" href="https://apps.apple.com/app/id6828492052">Hent Hyttio i App Store</a>
     </div>
   </section>
 </main>
 
-<footer>
+<footer class="foot">
   <div class="wrap">
     <span>© 2026 Hyttio</span>
     <a href="dele-sommerhus.html">Dele sommerhus</a>
     <a href="udgifter-sommerhus.html">Fordel udgifterne</a>
     <a href="tjekliste-sommerhus.html">Tjekliste</a>
     <a href="husregler-skabelon.html">Husregler-skabelon</a>
+    <a href="privacy.html">Privatlivspolitik</a>
+    <span class="spacer"></span>
     <a href="no/" hreflang="nb">Norsk</a>
     <a href="sv/" hreflang="sv">Svenska</a>
     <a href="en/" hreflang="en">English</a>
-    <a href="privacy.html">Privatlivspolitik</a>
   </div>
 </footer>
+<script src="home.js"></script>
 <script src="lang.js"></script>
 </body>
 </html>
