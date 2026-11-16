@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hyttio – app for a shared holiday home or cabin</title>
 <meta name="description" content="Free iPhone app for families and friends who share a holiday home or cabin: shared booking calendar, split costs, chores, shopping list and house guide.">
-<meta property="og:title" content="Hyttio – share the holiday home without the hassle">
-<meta property="og:description" content="Free iPhone app for families and friends who share a holiday home or cabin: shared booking calendar, split costs, chores, shopping list and house guide.">
+<meta property="og:title" content="Who has the house next weekend?">
+<meta property="og:description" content="Hyttio is the shared calendar, money log and house guide for your holiday home. Free for iPhone.">
 <meta property="og:image" content="https://hyttio.com/img/og-en.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -26,19 +26,23 @@
 <link rel="icon" href="../img/icon-192.png" type="image/png">
 <link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="manifest" href="../site.webmanifest">
-<meta name="theme-color" content="#F4F2ED" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#10181D" media="(prefers-color-scheme: dark)">
-<link rel="stylesheet" href="../style.css">
+<meta name="theme-color" content="#2E4A5C">
+<link rel="stylesheet" href="../home.css">
+<script>document.documentElement.classList.add("js")</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Hyttio",
+  "name": "Hyttio: Shared Holiday Home",
   "operatingSystem": "iOS",
   "applicationCategory": "LifestyleApplication",
   "inLanguage": "en",
   "url": "https://apps.apple.com/app/id6828492052",
-  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "EUR"
+  }
 }
 </script>
 <script type="application/ld+json">
@@ -46,131 +50,233 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "What does Hyttio cost?", "acceptedAnswer": { "@type": "Answer", "text": "Hyttio is free for everyone in the house. No ads and no account." } },
-    { "@type": "Question", "name": "Does everyone need an iPhone?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, Hyttio is for iPhone and everyone needs to be signed in to iCloud. Bookings can also be shown in Google Calendar and Outlook." } },
-    { "@type": "Question", "name": "How do I invite the others?", "acceptedAnswer": { "@type": "Answer", "text": "Go to the House tab and tap “Create invitation link”. Send it by text, Messenger or email." } },
-    { "@type": "Question", "name": "Where is our data stored?", "acceptedAnswer": { "@type": "Answer", "text": "Everything is stored in iCloud with Apple and shared only with the people you invite. We can’t see your data." } }
+    {
+      "@type": "Question",
+      "name": "What does Hyttio cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Hyttio is free for everyone in the house. No ads and no account."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does everyone need an iPhone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Hyttio is for iPhone and everyone needs to be signed in to iCloud. Bookings can also be shown in Google Calendar and Outlook."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I invite the others?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Go to the House tab and tap “Create invitation link”. Send it by text, Messenger or email."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is our data stored?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Everything is stored in iCloud with Apple and shared only with the people you invite. We can’t see your data."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can we have more than one house?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Under House, Settings you can switch between houses or add a new one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which currencies does it use?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Euros, and Danish, Norwegian and Swedish kroner."
+      }
+    }
   ]
 }
 </script>
 </head>
-<body>
+<body class="home">
 
-<header class="top">
+<header class="bar" data-bg="fjord">
   <div class="wrap">
-    <a class="brand" href="../en/"><img src="../img/icon.png" alt="">Hyttio</a>
+    <a class="logo" href="../en/"><img src="../img/icon.png" alt="" width="34" height="34">Hyttio</a>
     <nav>
-      <a href="../en/sharing-a-holiday-home.html">Sharing a home</a>
-      <a href="../en/splitting-costs.html">Split costs</a>
-      <a href="../en/holiday-home-checklist.html">Checklist</a>
-      <a href="../en/#support">Support</a>
+      <a href="#how">How it works</a>
+      <a href="#guides">Guides</a>
+      <a href="#support">Questions</a>
     </nav>
     <div class="langs" aria-label="Language"><a href="../" hreflang="da" lang="da">DA</a><a href="../no/" hreflang="nb" lang="nb">NO</a><a href="../sv/" hreflang="sv" lang="sv">SV</a><a href="../en/" hreflang="en" lang="en" aria-current="true">EN</a></div>
-    <a class="btn small" href="https://apps.apple.com/app/id6828492052">Get the app</a>
+    <a class="pill" href="https://apps.apple.com/app/id6828492052">Get the app</a>
   </div>
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero theme-fjord" data-bg="fjord">
+    <div class="wrap hero-grid">
+      <div class="hero-text">
+        <h1>Who has the house next weekend?</h1>
+        <p class="lead">Hyttio is a free iPhone app for families who share a holiday home or cabin: one calendar, one money log and one house guide. No more digging through a group chat from 2019.</p>
+        <a class="store" href="https://apps.apple.com/app/id6828492052">Get Hyttio on the App Store</a>
+        <p class="note">Free and ad-free. Everyone in the house needs an iPhone, but bookings also show up in Google Calendar.</p>
+      </div>
+      <div class="hero-phone">
+        <div class="phone" role="img" aria-label="Hyttio on iPhone: the Lake House with the next stay, balance and open chores.">
+          <div class="app" aria-hidden="true">
+            <div class="app-hero"><span class="sunball"></span><small>Hi Emil</small><b>The Lake House</b><small>1 Shore Road</small></div>
+            <div class="app-acts"><span class="act"><i style="background:#2E4A5C;color:#FFFFFF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></i>Book</span><span class="act"><i style="background:#7FA7B8;color:#1D2A33"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3"/><path d="M2.5 10h19M6.5 15h4"/></svg></i>Expense</span><span class="act"><i style="background:#D9A441;color:#1D2A33"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="7" r="2"/><circle cx="5.5" cy="17" r="2"/><path d="M10 7h10M10 17h10"/></svg></i>Chore</span><span class="act"><i style="background:#36566A;color:#FFFFFF"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></i>Message</span></div>
+            <div class="app-card app-next"><span class="days"><b>5</b>days</span><span><small>Next stay</small><b>Sofie arrives</b><small>15–18 Nov, 3 nights</small></span></div>
+            <div class="app-card app-bal"><small>Your balance</small><b>You owe €180.00</b></div>
+            <div class="app-card app-tasks"><b>Open chores</b><span class="task"><i class="ring" style="border-color:#7FA7B8"></i>Clean the gutters</span><span class="task"><i class="ring" style="border-color:#2E4A5C"></i>Paint the fence</span><span class="task"><i class="ring" style="border-color:#D9A441"></i>Mow the lawn</span></div>
+            <div class="tabbar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3"/><path d="M2.5 10h19M6.5 15h4"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="7" r="2"/><circle cx="5.5" cy="17" r="2"/><path d="M10 7h10M10 17h10"/></svg><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg></div>
+          </div>
+        </div>
+        <p class="ping p0"><i class="dot" style="background:#2E4A5C"></i><span><b>Sofie</b> booked 15–18 November</span></p>
+        <p class="ping p1"><i class="dot" style="background:#7FA7B8"></i><span><b>Emil</b> paid €150 for firewood</span></p>
+        <p class="ping p2"><i class="dot" style="background:#D9A441"></i><span><b>Jonas</b> mowed the lawn</span></p>
+      </div>
+    </div>
     <div class="wrap">
-      <div>
-        <h1>Share the holiday home – <span class="hl">without the hassle</span></h1>
-        <p class="lead">Hyttio keeps everything in one place when several families share a holiday home or cabin: who is there when, who paid for what, and what needs fixing.</p>
-        <div class="pills"><span class="pill">Shared calendar</span><span class="pill">Costs</span><span class="pill">Chores</span><span class="pill">House guide</span></div>
-        <a class="btn" href="https://apps.apple.com/app/id6828492052">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16"/></svg>
-          Download free on the App Store
-        </a>
-        <p class="note">For iPhone · Free for the whole family · No ads · No account</p>
+      <ul class="strip">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg><span><b>One calendar</b>No double bookings</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5.5" width="19" height="13" rx="3"/><path d="M2.5 10h19M6.5 15h4"/></svg><span><b>Expenses</b>Who owes whom</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.5" cy="7" r="2"/><circle cx="5.5" cy="17" r="2"/><path d="M10 7h10M10 17h10"/></svg><span><b>Chores</b>With a name and a date</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h11"/></svg><span><b>House guide</b>Keys, wifi and bins</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="say theme-deep" id="how" data-bg="deep">
+    <div class="wrap">
+      <h2>Everything you ask each other about the house.</h2>
+      <p>Emil, Sofie and Jonas share the Lake House with their families. They're an example, but the questions are the same in every shared house. Tap one to see how Hyttio answers it.</p>
+      <ul class="cloud"><li><a href="#january">Can we have the house in week 29?</a></li><li><a href="#april">Who's mowing the lawn this year?</a></li><li><a href="#july">Where's the key?</a></li><li><a href="#october">I paid €150 for firewood.</a></li><li><a href="#november">Who owes whom?</a></li></ul>
+    </div>
+  </section>
+
+  <section class="story theme-sun" id="january" data-bg="sun">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Sofie, in January</p>
+        <h2>“Can we have the house in week 29?”</h2>
+        <p>Each family has its own colour in the calendar. Sofie sees that week 29 is free and books it in two taps. Emil and Jonas get a notification, and nobody else can book the same week.</p>
       </div>
-      <div class="phone shot">
-        <div class="screen">
-          <img src="../img/screen-en-1-home.webp" width="600" height="1339" alt="Hyttio: your shared holiday home, all in one place">
+      <div class="story-ui reveal">
+        <div class="ui ui-booking">
+          <div class="ui-head"><b>New booking</b><span>Try it: tap the button</span></div>
+          <div class="weeks"><span class="wk" style="background:#7FA7B8;color:#1D2A33"><b>27</b>Emil</span><span class="wk" style="background:#D9A441;color:#1D2A33"><b>28</b>Jonas</span><span class="wk free"><b>29</b>Free</span><span class="wk" style="background:#7FA7B8;color:#1D2A33"><b>30</b>Emil</span></div>
+          <div class="rows"><div class="row"><span>Who</span><span><i class="dot" style="background:#2E4A5C"></i>Sofie</span></div><div class="row"><span>Arrive</span><span>Sat 18 July</span></div><div class="row"><span>Leave</span><span>Sat 25 July</span></div><div class="row"><span>People</span><span>4</span></div></div>
+          <button class="ui-btn" type="button" data-book data-who="Sofie" data-color="#2E4A5C">Book week 29</button>
+          <p class="ui-toast" data-done hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Booked. Emil and Jonas have been notified.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="saadan">
-    <div class="wrap center">
-      <h2>Ready in five minutes</h2>
-      <p class="muted">Hyttio is made for siblings, families and friends who own or rent a holiday home together.</p>
-      <div class="grid3" style="text-align:left">
-        <div class="card">
-          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div>
-          <h3>1. Create the house</h3>
-          <p>Name the house, add who you are and pick a colour for each family.</p>
-        </div>
-        <div class="card">
-          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
-          <h3>2. Invite the others</h3>
-          <p>Send a link by text, Messenger or email. They tap it and they’re in – no account, just iCloud.</p>
-        </div>
-        <div class="card">
-          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
-          <h3>3. Book and share</h3>
-          <p>Book in two taps, add costs, and see straight away who owes whom.</p>
+  <section class="story theme-mist flip" id="april" data-bg="mist">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Jonas, in April</p>
+        <h2>“Who's mowing the lawn this year?”</h2>
+        <p>Chores get a name and a due date. Jobs that come round every year come back on their own, so nobody has to remember to remember.</p>
+      </div>
+      <div class="story-ui reveal">
+        <div class="ui ui-tasks">
+          <div class="ui-head"><b>Chores</b><span>Try it: tick one off</span></div>
+          <ul><li><button type="button" class="tick" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="t"><b>Mow the lawn</b><span><i class="dot" style="background:#D9A441"></i>Jonas, every 2 weeks</span></span></button></li><li><button type="button" class="tick" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="t"><b>Clean the gutters</b><span><i class="dot" style="background:#7FA7B8"></i>Emil, 1 May</span></span></button></li><li><button type="button" class="tick" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="t"><b>Book the sweep</b><span><i class="dot" style="background:#2E4A5C"></i>Sofie, 15 May</span></span></button></li><li><button type="button" class="tick" aria-pressed="false"><span class="box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><span class="t"><b>Turn the water on</b><span><i class="dot" style="background:#D9A441"></i>Jonas, before Easter</span></span></button></li></ul>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="soft">
-    <div class="wrap split">
-      <div>
-        <h2>Everything in one place</h2>
-        <ul class="ticks">
-          <li><strong>Shared booking calendar</strong> – book arrival and departure in two taps, one colour per family</li>
-          <li><strong>Costs</strong> – see who owes whom, in euro and Danish, Swedish and Norwegian kroner</li>
-          <li><strong>Chores</strong> – with an owner, due date and repeats – e.g. “Clear the gutters” every autumn</li>
-          <li><strong>Shopping list</strong> – so you never run out of coffee or toilet paper</li>
-          <li><strong>Electricity and water</strong> – log meter readings and see usage</li>
-          <li><strong>House guide</strong> – key box, wifi, fuse box and rubbish – with photos</li>
-        </ul>
+  <section class="story theme-deep" id="july" data-bg="deep">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>The guests, in July</p>
+        <h2>“Where's the key?”</h2>
+        <p>The house guide has the answer: the key safe, the wifi, the stopcock and when the bins go out. With photos, so the next family doesn't have to call and ask.</p>
       </div>
-      <div class="card article">
-        <h3>Five things to agree on when you share a holiday home</h3>
-        <ol>
-        <li><strong>Peak season:</strong> Take turns choosing weeks first, or have fixed weeks that rotate each year.</li>
-        <li><strong>Fixed costs:</strong> Property tax, insurance and standing charges are often split by ownership share.</li>
-        <li><strong>Usage:</strong> Electricity, firewood and water can be split by nights stayed or by meter readings.</li>
-        <li><strong>Upkeep:</strong> Who clears the gutters, paints and mows? Keep a shared list of chores.</li>
-        <li><strong>If someone wants out:</strong> Agree on a right of first refusal and how the price is set. Put it in writing, ideally with a lawyer.</li>
-        </ol>
+      <div class="story-ui reveal">
+        <div class="ui ui-guide">
+          <div class="ui-head"><b>House guide</b></div>
+          <div class="rows"><div class="row col"><b>Key safe</b><span>By the back door. The code is in the house guide.</span></div><div class="row col"><b>Wifi</b><span>Network: TheLakeHouse</span></div><div class="row col"><b>Stopcock</b><span>In the utility room behind the washing machine</span></div><div class="row col"><b>Bins</b><span>Collected on Tuesdays, every other week</span></div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="wrap center">
-      <h2>See Hyttio</h2>
-      <div class="shots" tabindex="0">
-        <figure><div class="screen"><img src="../img/screen-en-1-home.webp" alt="Your shared holiday home" loading="lazy" width="600" height="1339"></div><figcaption><strong>Your shared holiday home</strong>all in one place</figcaption></figure>
-        <figure><div class="screen"><img src="../img/screen-en-2-calendar.webp" alt="Shared booking calendar" loading="lazy" width="600" height="1339"></div><figcaption><strong>Shared booking calendar</strong>book in two taps</figcaption></figure>
-        <figure><div class="screen"><img src="../img/screen-en-3-expenses.webp" alt="Split costs fairly" loading="lazy" width="600" height="1339"></div><figcaption><strong>Split costs fairly</strong>see who owes whom</figcaption></figure>
-        <figure><div class="screen"><img src="../img/screen-en-4-tasks.webp" alt="Share the chores" loading="lazy" width="600" height="1339"></div><figcaption><strong>Share the chores</strong>with due dates and repeats</figcaption></figure>
-        <figure><div class="screen"><img src="../img/screen-en-5-shopping.webp" alt="One shared shopping list" loading="lazy" width="600" height="1339"></div><figcaption><strong>One shared shopping list</strong>never run out of coffee</figcaption></figure>
-        <figure><div class="screen"><img src="../img/screen-en-6-meters.webp" alt="Track electricity and water" loading="lazy" width="600" height="1339"></div><figcaption><strong>Track electricity and water</strong>log readings, see usage</figcaption></figure>
-        <figure><div class="screen"><img src="../img/screen-en-7-guide.webp" alt="House guide for your cabin" loading="lazy" width="600" height="1339"></div><figcaption><strong>House guide for your cabin</strong>keys, wifi and rubbish</figcaption></figure>
+  <section class="story theme-soft flip" id="october" data-bg="soft">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Emil, in October</p>
+        <h2>“I paid €150 for firewood.”</h2>
+        <p>Emil snaps the receipt and adds the expense. Hyttio splits it between everyone who's paying, and the balance updates straight away.</p>
+      </div>
+      <div class="story-ui reveal">
+        <div class="ui ui-expense">
+          <div class="receipt-top">
+            <div><b>Firewood</b><span>Paid by Emil, 14 Oct</span></div>
+            <b class="amount">€150.00</b>
+          </div>
+          <div class="tags"><span>Split 3 ways</span><span>€50.00 each</span><span>Receipt attached</span></div>
+          <p class="rows-h">Balance now</p>
+          <div class="rows"><div class="row"><i class="dot" style="background:#2E4A5C"></i><span class="name">Sofie</span><span class="plus">Is owed €200.00</span></div><div class="row"><i class="dot" style="background:#7FA7B8"></i><span class="name">Emil</span><span class="minus">Owes €180.00</span></div><div class="row"><i class="dot" style="background:#D9A441"></i><span class="name">Jonas</span><span class="minus">Owes €20.00</span></div></div>
+        </div>
       </div>
     </div>
   </section>
 
-  <section>
-    <div class="wrap center">
+  <section class="story theme-sky" id="november" data-bg="sky">
+    <div class="wrap story-grid">
+      <div class="story-text reveal">
+        <p class="who"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg>Everyone, in November</p>
+        <h2>“Who owes whom?”</h2>
+        <p>Hyttio works it out and finds the fewest payments to settle up. Once the money's sent, mark it as paid and everyone's back to zero.</p>
+      </div>
+      <div class="story-ui reveal">
+        <div class="ui ui-settle">
+          <div class="ui-head"><b>Settle up</b><span>Try it: tap the button</span></div>
+          <div class="rows"><div class="row"><i class="dot" style="background:#7FA7B8"></i><span class="name">Emil pays Sofie</span><b>€180</b></div><div class="row"><i class="dot" style="background:#D9A441"></i><span class="name">Jonas pays Sofie</span><b>€20</b></div></div>
+          <button class="ui-btn" type="button" data-settle data-done-text="Paid">Mark as paid</button>
+          <p class="ui-note">Two payments and everyone's square.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="mid theme-fjord" data-bg="fjord">
+    <div class="wrap">
+      <h2>Ready for your own house?</h2>
+      <p>Hyttio is free. Download it, set up the house and send the link to the rest of the family.</p>
+      <div class="mid-actions">
+        <a class="store" href="https://apps.apple.com/app/id6828492052">Get Hyttio on the App Store</a>
+        <button class="share" type="button" data-share data-title="Hyttio" data-text="Shall we use Hyttio for the house? Calendar, expenses and house guide in one place." data-url="https://hyttio.com/en/" data-copied="Link copied. Paste it into your group chat.">Send the link to the family</button>
+      </div>
+      <p class="share-note" data-share-note hidden></p>
+    </div>
+  </section>
+
+  <section class="guides theme-deep" id="guides" data-bg="deep">
+    <div class="wrap">
       <h2>Free guides for families who share</h2>
-      <div class="grid3" style="text-align:left;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
-        <a class="card" href="../en/sharing-a-holiday-home.html" style="text-decoration:none;color:inherit"><h3>10 things to agree on</h3><p>Ownership shares, peak season, costs, upkeep and what happens if someone wants to sell.</p></a>
-        <a class="card" href="../en/splitting-costs.html" style="text-decoration:none;color:inherit"><h3>Split the costs</h3><p>Fixed costs by share, usage by days. Calculator and Excel template.</p></a>
-        <a class="card" href="../en/holiday-home-checklist.html" style="text-decoration:none;color:inherit"><h3>Holiday home checklist</h3><p>Arrival, departure and winterising – ready to print.</p></a>
-        <a class="card" href="../en/house-rules-template.html" style="text-decoration:none;color:inherit"><h3>House rules template</h3><p>Fill it in together and put it up in the house.</p></a>
-      </div>
+      <ul class="guide-list">
+        <li><a href="../en/sharing-a-holiday-home.html"><b>10 things to agree on</b><span>Ownership shares, peak season, costs, upkeep and what happens if someone wants to sell.</span></a></li>
+        <li><a href="../en/splitting-costs.html"><b>Split the costs</b><span>Fixed costs by share, usage by days. Calculator and Excel template.</span></a></li>
+        <li><a href="../en/holiday-home-checklist.html"><b>Holiday home checklist</b><span>Arrival, departure and winterising, ready to print.</span></a></li>
+        <li><a href="../en/house-rules-template.html"><b>House rules</b><span>A template you fill in together and put up in the house.</span></a></li>
+      </ul>
     </div>
   </section>
 
-  <section id="support" class="soft">
+  <section class="faq theme-deep" id="support" data-bg="deep">
     <div class="wrap narrow">
-      <h2>Questions and support</h2>
+      <h2>Questions and answers</h2>
       <details>
         <summary>What does Hyttio cost?</summary>
         <p>Hyttio is free for everyone in the house. No ads and no account.</p>
@@ -187,28 +293,42 @@
         <summary>Where is our data stored?</summary>
         <p>Everything is stored in iCloud with Apple and shared only with the people you invite. We can’t see your data.</p>
       </details>
-      <p style="margin-top:28px">Questions or ideas? Write to <a href="mailto:support@hyttio.com">support@hyttio.com</a>.</p>
+      <details>
+        <summary>Can we have more than one house?</summary>
+        <p>Yes. Under House, Settings you can switch between houses or add a new one.</p>
+      </details>
+      <details>
+        <summary>Which currencies does it use?</summary>
+        <p>Euros, and Danish, Norwegian and Swedish kroner.</p>
+      </details>
+      <p class="support">Other questions? Write to <a href="mailto:support@hyttio.com">support@hyttio.com</a>. <a href="../privacy.html">Privacy policy</a>.</p>
     </div>
   </section>
 
-  <section class="cta">
-    <div class="wrap narrow">
-      <h2>More holiday, less logistics</h2>
-      <p>Download Hyttio for free and invite the rest of the family.</p>
-      <a class="btn" href="https://apps.apple.com/app/id6828492052">Download free on the App Store</a>
+  <section class="end theme-fjord" data-bg="fjord">
+    <div class="wrap">
+      <h2>More time at the house. Less time in the group chat.</h2>
+      <p>Get Hyttio, set up the house and send the link to the rest of the family.</p>
+      <a class="store" href="https://apps.apple.com/app/id6828492052">Get Hyttio on the App Store</a>
     </div>
   </section>
 </main>
 
-<footer>
+<footer class="foot">
   <div class="wrap">
     <span>© 2026 Hyttio</span>
-    <a href="../en/sharing-a-holiday-home.html">Sharing a home</a> <a href="../en/splitting-costs.html">Split costs</a> <a href="../en/holiday-home-checklist.html">Checklist</a> <a href="../en/house-rules-template.html">House rules</a>
+    <a href="../en/sharing-a-holiday-home.html">Sharing a home</a>
+    <a href="../en/splitting-costs.html">Split costs</a>
+    <a href="../en/holiday-home-checklist.html">Checklist</a>
+    <a href="../en/house-rules-template.html">House rules</a>
     <a href="../privacy.html">Privacy policy</a>
     <span class="spacer"></span>
-    <a href="../" hreflang="da">Dansk</a> <a href="../no/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../en/" hreflang="en">English</a>
+    <a href="../" hreflang="da">Dansk</a>
+    <a href="../no/" hreflang="nb">Norsk</a>
+    <a href="../sv/" hreflang="sv">Svenska</a>
   </div>
 </footer>
+<script src="../home.js"></script>
 <script src="../lang.js"></script>
 </body>
 </html>
