@@ -72,28 +72,26 @@ p { margin: 0 0 1em; }
 /* Top: lys bjælke med fjordblå tekst */
 .top {
   position: sticky; top: 0; z-index: 10;
-  background: color-mix(in srgb, var(--bg) 90%, transparent);
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
+  background: var(--fjord-deep);
 }
 .top .wrap { display: flex; align-items: center; gap: 20px; height: 64px; }
-.brand { margin-right: auto; display: flex; align-items: center; gap: 10px; color: var(--text); text-decoration: none; font-weight: 750; font-size: 21px; letter-spacing: -0.01em; }
+.brand { margin-right: auto; display: flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-weight: 750; font-size: 21px; letter-spacing: -0.01em; }
 .brand img { width: 34px; height: 34px; border-radius: 9px; }
 .top nav { display: flex; gap: 22px; }
-.top nav a { color: var(--muted); text-decoration: none; font-size: 15px; font-weight: 550; }
-.top nav a:hover, .top nav a[aria-current] { color: var(--text); }
+.top nav a { color: rgba(255, 255, 255, 0.8); text-decoration: none; font-size: 15px; font-weight: 550; }
+.top nav a:hover, .top nav a[aria-current] { color: #FFFFFF; }
 @media (max-width: 760px) { .top nav { display: none; } }
 
 /* Knapper: hvid på fjord, fjord på lyst */
 .btn {
   display: inline-flex; align-items: center; gap: 10px;
-  background: var(--on-fjord); color: var(--fjord-deep); text-decoration: none; font-weight: 680;
+  background: var(--sun); color: #1D2A33; text-decoration: none; font-weight: 680;
   padding: 14px 24px; border-radius: 999px; font-size: 17px;
 }
 .btn svg { width: 22px; height: 22px; }
-.btn:hover { background: var(--mist); }
-.btn.small { padding: 8px 16px; font-size: 15px; background: var(--fjord); color: var(--on-fjord); }
-.btn.small:hover { background: var(--fjord-deep); }
+.btn:hover { background: #F4F2ED; }
+.btn.small { white-space: nowrap; padding: 8px 16px; font-size: 15px; background: var(--bg-sand, #F4F2ED); color: var(--fjord-deep); }
+.btn.small:hover { background: #FFFFFF; }
 
 /* Forsidens top: fjordblå flade med en lav sol bag telefonen */
 .hero {
@@ -169,9 +167,10 @@ th, td { text-align: left; padding: 12px 14px; border-bottom: 1px solid var(--li
 th { background: var(--soft); }
 td.num { font-weight: 700; white-space: nowrap; }
 .box { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 20px; margin: 24px 0; }
-.page-head { color: var(--text); background: var(--mist); padding: 56px 0 48px; border-bottom: 1px solid var(--line); }
-.page-head p { color: var(--muted); font-size: 19px; max-width: 640px; margin: 0; }
-.updated { font-size: 14px; color: var(--muted); margin-top: 14px !important; }
+.page-head { color: #FFFFFF; background: var(--fjord); padding: 72px 0 64px; }
+.page-head h1 { font-weight: 800; letter-spacing: -0.03em; line-height: 1.02; }
+.page-head p { color: var(--on-fjord-muted); font-size: 19px; max-width: 640px; margin: 0; }
+.updated { font-size: 14px; color: var(--on-fjord-muted); margin-top: 14px !important; }
 
 /* Spørgsmål */
 details { border-bottom: 1px solid var(--line); padding: 16px 0; }
@@ -239,10 +238,10 @@ footer .spacer { flex: 1; }
 
 /* Sprogvælger i toppen og banner med forslag om eget sprog */
 .langs { display: flex; gap: 2px; font-size: 13px; font-weight: 650; }
-.langs a { color: var(--muted); text-decoration: none; padding: 4px 6px; border-radius: 6px; }
-.langs a:hover { color: var(--text); }
-.langs a[aria-current] { color: var(--text); background: var(--soft); }
-@media (max-width: 420px) { .langs a { padding: 4px 3px; } .top .wrap { gap: 10px; } .brand { font-size: 19px; } }
+.langs a { color: rgba(255, 255, 255, 0.75); text-decoration: none; padding: 4px 6px; border-radius: 6px; }
+.langs a:hover { color: #FFFFFF; }
+.langs a[aria-current] { color: #FFFFFF; background: rgba(255, 255, 255, 0.16); }
+@media (max-width: 420px) { .langs a { padding: 4px 3px; } .top .wrap { gap: 10px; } .brand { font-size: 19px; } .top .btn.small { display: none; } }
 .langbar { display: flex; flex-wrap: wrap; gap: 6px 14px; align-items: center; justify-content: center; background: var(--sun); color: #1D2A33; font-size: 15px; padding: 9px 44px 9px 16px; position: relative; }
 .langbar a { color: #1B2D38; font-weight: 700; }
 .langbar button { position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: none; border: 0; font-size: 16px; cursor: pointer; color: #1D2A33; }

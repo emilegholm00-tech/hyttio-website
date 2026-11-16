@@ -1,0 +1,73 @@
+/* App-kortene: stykker af Hyttio bygget i HTML, brugt på forsiden og i guiderne.
+   Kortene er altid lyse, uanset sidens tema, så farverne står her og ikke i sidens egne variabler. */
+:root {
+  --c-card: #FFFFFF; --c-ink: #1D2A33; --c-muted: #55666F; --c-line: #E7E3DA;
+  --c-fjord: #2E4A5C; --c-deep: #1B2D38; --c-fjord-soft: #36566A; --c-sky: #7FA7B8;
+  --c-mist: #E3ECF0; --c-sun: #D9A441; --c-sand: #F4F2ED;
+}
+/* App-kortene: lavet som i appen */
+.ui { background: var(--c-card); color: var(--c-ink); border-radius: 28px; padding: 22px; box-shadow: 0 30px 60px rgba(5, 12, 18, 0.3); font-size: 16px; }
+.ui-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 14px; }
+.ui-head b { font-weight: 800; font-size: 24px; letter-spacing: -0.01em; }
+.ui-head span { font-size: 13px; color: var(--c-muted); }
+.rows .row { display: flex; align-items: center; gap: 10px; padding: 12px 0; border-top: 1px solid var(--c-line); }
+.rows .row > :last-child { margin-left: auto; text-align: right; }
+.rows .row > span:first-child { color: var(--c-muted); }
+.rows .row .name { color: var(--c-ink); }
+.rows .row.col { flex-direction: column; align-items: flex-start; gap: 2px; }
+.rows .row.col > :last-child { margin-left: 0; text-align: left; color: var(--c-muted); font-size: 15px; }
+.ui-btn { appearance: none; border: 0; width: 100%; margin-top: 16px; padding: 14px; border-radius: 999px; background: var(--c-fjord); color: #fff; font: inherit; font-weight: 700; font-size: 16px; cursor: pointer; }
+.ui-btn:hover { background: var(--c-deep); }
+.ui-btn.is-done { background: var(--c-deep); cursor: default; }
+.ui-toast { display: flex; gap: 8px; align-items: center; margin-top: 12px; font-size: 15px; color: var(--c-fjord); font-weight: 600; }
+.ui-toast[hidden] { display: none; }
+.ui-toast svg { width: 18px; height: 18px; flex: none; }
+.ui-note { margin-top: 12px; font-size: 14px; color: var(--c-muted); }
+
+.weeks { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 6px; margin-bottom: 8px; }
+.wk { display: flex; flex-direction: column; justify-content: flex-end; gap: 2px; padding: 10px; border-radius: 14px; color: #fff; font-size: 13px; font-weight: 600; min-height: 74px; }
+.wk b { font-weight: 800; font-size: 24px; line-height: 1; }
+.wk.free { color: var(--c-ink); background: var(--c-sand); box-shadow: inset 0 0 0 2px var(--c-sky); }
+
+.receipt-top { display: flex; justify-content: space-between; gap: 16px; align-items: flex-start; }
+.receipt-top b { font-size: 19px; }
+.receipt-top span { display: block; font-size: 14px; color: var(--c-muted); }
+.receipt-top .amount { font-weight: 800; font-size: 26px; white-space: nowrap; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 16px 0 10px; }
+.tags span { background: var(--c-mist); border-radius: 999px; padding: 5px 11px; font-size: 13px; font-weight: 600; color: var(--c-ink); }
+.plus { color: var(--c-fjord); font-weight: 700; }
+.minus { color: var(--c-ink); font-weight: 700; }
+
+.ui-tasks ul { display: flex; flex-direction: column; }
+.tick { appearance: none; background: none; border: 0; border-top: 1px solid var(--c-line); width: 100%; display: flex; gap: 14px; align-items: center; padding: 12px 0; font: inherit; color: inherit; text-align: left; cursor: pointer; }
+.tick .box { width: 26px; height: 26px; border-radius: 50%; border: 2px solid var(--c-sky); display: grid; place-items: center; flex: none; transition: background-color 0.2s, border-color 0.2s; }
+.tick .box svg { width: 15px; height: 15px; color: #fff; opacity: 0; }
+.tick .t { display: flex; flex-direction: column; gap: 2px; }
+.tick .t b { font-weight: 600; font-size: 17px; }
+.tick .t span { font-size: 13px; color: var(--c-muted); display: flex; align-items: center; gap: 6px; }
+.tick[aria-pressed="true"] .box { background: var(--c-fjord); border-color: var(--c-fjord); }
+.tick[aria-pressed="true"] .box svg { opacity: 1; }
+.tick[aria-pressed="true"] .t b { text-decoration: line-through; color: var(--c-muted); }
+
+
+.rows-h { margin: 6px 0 0; font-size: 13px; font-weight: 600; color: var(--c-muted); }
+.dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; flex: none; }
+
+/* Appen i guiderne: en fjordblå blok med et kort, man kan prøve, og en App Store-knap */
+.app-promo { background: var(--c-fjord); color: #FFFFFF; padding: 88px 0; }
+.app-promo .promo-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 56px; align-items: center; }
+.app-promo .who { display: block; font-size: 15px; font-weight: 600; color: #CFE0E8; margin: 0 0 14px; }
+.app-promo h2 { hyphens: auto; overflow-wrap: break-word; color: #FFFFFF; font-size: clamp(32px, 4.6vw, 56px); line-height: 1; letter-spacing: -0.03em; font-weight: 800; margin: 0 0 18px; max-width: 14ch; }
+.app-promo p { color: #CFE0E8; font-size: 18px; max-width: 42ch; margin: 0 0 26px; }
+.app-promo .note { font-size: 14px; margin: 14px 0 0; }
+.store { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; background: var(--c-sun); color: var(--c-ink); font-weight: 700; font-size: 17px; padding: 16px 26px; border-radius: 999px; }
+.store:hover { background: var(--c-sand); }
+.app-promo .ui { text-align: left; }
+@media (max-width: 860px) { .app-promo .promo-grid { grid-template-columns: minmax(0, 1fr); gap: 40px; } .app-promo { padding: 64px 0; } }
+@media print { .app-promo { display: none !important; } }
+.ui ul { list-style: none; margin: 0; padding: 0; }
+.ui p { margin: 0; }
+.ui .ui-toast, .ui .ui-note { margin-top: 12px; }
+.app-promo .ui p { font-size: 14px; max-width: none; margin: 12px 0 0; color: var(--c-muted); }
+.app-promo .ui .ui-toast { color: var(--c-fjord); font-size: 15px; }
+.app-promo .ui .rows-h { margin: 6px 0 0; font-size: 13px; }

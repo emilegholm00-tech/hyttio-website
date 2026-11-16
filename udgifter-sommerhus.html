@@ -29,6 +29,7 @@
 <meta name="theme-color" content="#F4F2ED" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#10181D" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cards.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -167,6 +168,27 @@
     </div>
   </section>
 
+  <!-- app -->
+  <section class="app-promo">
+    <div class="wrap promo-grid">
+      <div>
+        <p class="who">Når regnskabet skal gøres op</p>
+        <h2>Lad Hyttio regne det ud</h2>
+        <p>Læg udgifterne ind, efterhånden som de kommer. Hyttio holder saldoen og finder den korteste vej til at gøre op.</p>
+        <a class="store" href="https://apps.apple.com/app/id6828492052">Hent Hyttio i App Store</a>
+        <p class="note">Gratis til iPhone. Uden reklamer og uden konto.</p>
+      </div>
+      <div>
+        <div class="ui ui-settle">
+          <div class="ui-head"><b>Gør op</b><span>Prøv: tryk på knappen</span></div>
+          <div class="rows"><div class="row"><i class="dot" style="background:#7FA7B8"></i><span class="name">Emil betaler Sofie</span><b>1.350 kr.</b></div><div class="row"><i class="dot" style="background:#D9A441"></i><span class="name">Jonas betaler Sofie</span><b>150 kr.</b></div></div>
+          <button class="ui-btn" type="button" data-settle data-done-text="Betalt">Markér som betalt</button>
+          <p class="ui-note">To overførsler, og så står alle på nul.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- /app -->
   <section class="cta">
     <div class="wrap narrow">
       <h2>Slut med "hvem skylder hvem?"</h2>
@@ -190,6 +212,7 @@
   </div>
 </footer>
 <script src="calc.js"></script>
+<script src="home.js"></script>
 <script src="lang.js"></script>
 <!-- GoatCounter: tæller besøgende uden cookies. Værtsnavnet sættes foran stien, så én konto dækker alle sider. -->
 <script>window.goatcounter = { path: function (p) { return location.host + p } }</script>

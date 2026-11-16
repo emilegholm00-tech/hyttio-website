@@ -9,7 +9,7 @@
     // Den sektion, der ligger lige under toppen, bestemmer dens farve.
     const barWatch = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
-        if (e.isIntersecting) bar.style.setProperty("--barbg", colors[e.target.dataset.bg]);
+        if (e.isIntersecting && bar) bar.style.setProperty("--barbg", colors[e.target.dataset.bg]);
       });
     }, { rootMargin: "-68px 0px -85% 0px" });
     sections.forEach(function (s) { barWatch.observe(s); });

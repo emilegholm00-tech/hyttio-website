@@ -29,6 +29,7 @@
 <meta name="theme-color" content="#F4F2ED" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#10181D" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="cards.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -137,6 +138,28 @@
     </div>
   </section>
 
+  <!-- app -->
+  <section class="app-promo">
+    <div class="wrap promo-grid">
+      <div>
+        <p class="who">Når I har aftalt det</p>
+        <h2>Aftalerne, samlet i én app</h2>
+        <p>Hyttio holder styr på det, I har aftalt: hver familie har sin farve i kalenderen, og ingen kan booke den samme uge.</p>
+        <a class="store" href="https://apps.apple.com/app/id6828492052">Hent Hyttio i App Store</a>
+        <p class="note">Gratis til iPhone. Uden reklamer og uden konto.</p>
+      </div>
+      <div>
+        <div class="ui ui-booking">
+          <div class="ui-head"><b>Ny booking</b><span>Prøv: tryk på knappen</span></div>
+          <div class="weeks"><span class="wk" style="background:#7FA7B8;color:#1D2A33"><b>27</b>Emil</span><span class="wk" style="background:#D9A441;color:#1D2A33"><b>28</b>Jonas</span><span class="wk free"><b>29</b>Ledig</span><span class="wk" style="background:#7FA7B8;color:#1D2A33"><b>30</b>Emil</span></div>
+          <div class="rows"><div class="row"><span>Hvem</span><span><i class="dot" style="background:#2E4A5C"></i>Sofie</span></div><div class="row"><span>Ankomst</span><span>Lør. 18. juli</span></div><div class="row"><span>Afrejse</span><span>Lør. 25. juli</span></div><div class="row"><span>Personer</span><span>4</span></div></div>
+          <button class="ui-btn" type="button" data-book data-who="Sofie" data-color="#2E4A5C">Book uge 29</button>
+          <p class="ui-toast" data-done hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Booket. Emil og Jonas har fået besked.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- /app -->
   <section class="cta">
     <div class="wrap narrow">
       <h2>Én kalender, ét regnskab</h2>
@@ -159,6 +182,7 @@
     <a href="privacy.html">Privatlivspolitik</a>
   </div>
 </footer>
+<script src="home.js"></script>
 <script src="lang.js"></script>
 <!-- GoatCounter: tæller besøgende uden cookies. Værtsnavnet sættes foran stien, så én konto dækker alle sider. -->
 <script>window.goatcounter = { path: function (p) { return location.host + p } }</script>
