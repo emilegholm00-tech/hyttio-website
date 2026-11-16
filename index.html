@@ -3,23 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hyttio – app til delt sommerhus: booking, udgifter og opgaver</title>
-<meta name="description" content="Hyttio er en gratis iPhone-app til familier og venner, der deler et sommerhus eller en hytte. Fælles bookingkalender, deling af udgifter, opgaver, indkøbsliste og husbog.">
+<title>Hyttio – app til delt sommerhus og fælles hytte</title>
+<meta name="description" content="Gratis iPhone-app til familier og venner, der deler sommerhus eller hytte: fælles bookingkalender, deling af udgifter, opgaver, indkøbsliste og husbog.">
 <meta property="og:title" content="Hyttio – del sommerhuset uden kaos">
 <meta property="og:description" content="Gratis app til jer, der deler et sommerhus: fælles kalender, udgifter, opgaver og husbog ét sted.">
-<meta property="og:image" content="https://hyttio.com/img/da-1-home.jpg">
+<meta property="og:image" content="https://hyttio.com/img/og-da.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://hyttio.com/">
 <meta property="og:locale" content="da_DK">
 <meta name="apple-itunes-app" content="app-id=6828492052">
-<link rel="icon" href="img/icon.png">
-<link rel="apple-touch-icon" href="img/icon.png">
 <link rel="canonical" href="https://hyttio.com/">
 <link rel="alternate" hreflang="da" href="https://hyttio.com/">
 <link rel="alternate" hreflang="nb" href="https://hyttio.com/no/">
 <link rel="alternate" hreflang="sv" href="https://hyttio.com/sv/">
 <link rel="alternate" hreflang="en" href="https://hyttio.com/en/">
 <link rel="alternate" hreflang="x-default" href="https://hyttio.com/en/">
+<link rel="preload" href="fonts/schibsted-grotesk-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="img/icon-192.png" type="image/png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<meta name="theme-color" content="#F4F2ED" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#10181D" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
@@ -78,7 +86,7 @@
       </div>
       <div class="phone shot">
         <div class="screen">
-          <img src="img/app-home.jpg" width="600" height="1304" alt="Hyttio på iPhone: næste ophold, saldo og åbne opgaver i Huset i Hornbæk">
+          <img src="img/app-home.webp" width="600" height="1304" alt="Hyttio på iPhone: næste ophold, saldo og åbne opgaver i Huset i Hornbæk">
         </div>
       </div>
     </div>
@@ -90,17 +98,17 @@
       <p class="muted">Hyttio er lavet til søskende, familier og venner, der ejer eller lejer et sommerhus, en hytte eller et kolonihavehus sammen.</p>
       <div class="grid3" style="text-align:left">
         <div class="card">
-          <div class="icon" style="background:#0a60e6">🏡</div>
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-5h4v5"/></svg></div>
           <h3>1. Opret huset</h3>
           <p>Giv huset et navn, skriv hvem I er, og vælg en farve til hver familie.</p>
         </div>
         <div class="card">
-          <div class="icon" style="background:#6b5ae0">✉️</div>
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></div>
           <h3>2. Invitér de andre</h3>
           <p>Send et link på Beskeder eller mail. De andre trykker på det og er med. Ingen konto, kun iCloud.</p>
         </div>
         <div class="card">
-          <div class="icon" style="background:#1fa855">📅</div>
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
           <h3>3. Book og del</h3>
           <p>Book med to tryk, læg udgifter ind, og se med det samme, hvem der skylder hvem.</p>
         </div>
@@ -121,8 +129,8 @@
         </ul>
       </div>
       <div class="pics">
-        <img src="img/app-calendar.jpg" width="600" height="1304" alt="Fælles bookingkalender med en farve pr. familie" loading="lazy">
-        <img src="img/app-expenses.jpg" width="600" height="1304" alt="Udgifter og saldo: hvem skylder hvem" loading="lazy">
+        <img src="img/app-calendar.webp" width="600" height="1304" alt="Fælles bookingkalender med en farve pr. familie" loading="lazy">
+        <img src="img/app-expenses.webp" width="600" height="1304" alt="Udgifter og saldo: hvem skylder hvem" loading="lazy">
       </div>
     </div>
   </section>
@@ -158,13 +166,13 @@
     <div class="wrap center">
       <h2>Se Hyttio</h2>
       <div class="shots" tabindex="0" aria-label="Billeder fra appen">
-        <img src="img/da-1-home.jpg" alt="Hele familiens sommerhus samlet ét sted" loading="lazy" width="900" height="1955">
-        <img src="img/da-2-calendar.jpg" alt="Fælles bookingkalender" loading="lazy" width="900" height="1955">
-        <img src="img/da-3-expenses.jpg" alt="Del udgifterne retfærdigt" loading="lazy" width="900" height="1955">
-        <img src="img/da-4-tasks.jpg" alt="Fordel opgaverne" loading="lazy" width="900" height="1955">
-        <img src="img/da-5-shopping.jpg" alt="Fælles indkøbsliste" loading="lazy" width="900" height="1955">
-        <img src="img/da-6-meters.jpg" alt="Hold øje med el og vand" loading="lazy" width="900" height="1955">
-        <img src="img/da-7-guide.jpg" alt="Husbog med nøgle, wifi og affald" loading="lazy" width="900" height="1955">
+        <img src="img/da-1-home.webp" alt="Hele familiens sommerhus samlet ét sted" loading="lazy" width="900" height="1955">
+        <img src="img/da-2-calendar.webp" alt="Fælles bookingkalender" loading="lazy" width="900" height="1955">
+        <img src="img/da-3-expenses.webp" alt="Del udgifterne retfærdigt" loading="lazy" width="900" height="1955">
+        <img src="img/da-4-tasks.webp" alt="Fordel opgaverne" loading="lazy" width="900" height="1955">
+        <img src="img/da-5-shopping.webp" alt="Fælles indkøbsliste" loading="lazy" width="900" height="1955">
+        <img src="img/da-6-meters.webp" alt="Hold øje med el og vand" loading="lazy" width="900" height="1955">
+        <img src="img/da-7-guide.webp" alt="Husbog med nøgle, wifi og affald" loading="lazy" width="900" height="1955">
       </div>
     </div>
   </section>
