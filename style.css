@@ -139,7 +139,10 @@ section.soft { background: var(--soft); }
 
 /* Billeder fra appen */
 .shots { display: flex; gap: 16px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 30px 20px 10px; margin: 0 -20px; }
-.shots img { width: 240px; flex: none; border-radius: 22px; scroll-snap-align: center; }
+.shots figure { width: 220px; flex: none; margin: 0; scroll-snap-align: center; text-align: center; }
+.shots .screen { overflow: hidden; border: 8px solid #121216; border-radius: 40px; background: #f2f2f7; }
+.shots figcaption { margin-top: 14px; font-size: 15px; line-height: 1.35; color: var(--muted); }
+.shots figcaption strong { display: block; color: var(--text); font-size: 16px; font-weight: 680; }
 
 /* Beregner */
 .calc { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 20px; overflow: hidden; border: 1px solid var(--line); margin-top: 32px; background: var(--card); }
