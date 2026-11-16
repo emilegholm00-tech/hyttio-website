@@ -29,6 +29,7 @@
 <meta name="theme-color" content="#F4F2ED" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#10181D" media="(prefers-color-scheme: dark)">
 <link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../cards.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -151,6 +152,28 @@
     </div>
   </section>
 
+  <!-- app -->
+  <section class="app-promo">
+    <div class="wrap promo-grid">
+      <div>
+        <p class="who">Once you've agreed</p>
+        <h2>Your agreements in one app</h2>
+        <p>Hyttio keeps track of what you agreed: each family has its own colour in the calendar, and nobody can book the same week.</p>
+        <a class="store" href="https://apps.apple.com/app/id6828492052">Get Hyttio on the App Store</a>
+        <p class="note">Free for iPhone. No ads and no account.</p>
+      </div>
+      <div>
+        <div class="ui ui-booking">
+          <div class="ui-head"><b>New booking</b><span>Try it: tap the button</span></div>
+          <div class="weeks"><span class="wk" style="background:#7FA7B8;color:#1D2A33"><b>27</b>Emil</span><span class="wk" style="background:#D9A441;color:#1D2A33"><b>28</b>Jonas</span><span class="wk free"><b>29</b>Free</span><span class="wk" style="background:#7FA7B8;color:#1D2A33"><b>30</b>Emil</span></div>
+          <div class="rows"><div class="row"><span>Who</span><span><i class="dot" style="background:#2E4A5C"></i>Sofie</span></div><div class="row"><span>Arrive</span><span>Sat 18 July</span></div><div class="row"><span>Leave</span><span>Sat 25 July</span></div><div class="row"><span>People</span><span>4</span></div></div>
+          <button class="ui-btn" type="button" data-book data-who="Sofie" data-color="#2E4A5C">Book week 29</button>
+          <p class="ui-toast" data-done hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg>Booked. Emil and Jonas have been notified.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+<!-- /app -->
   <section class="cta">
     <div class="wrap narrow">
       <h2>One calendar, one set of accounts</h2>
@@ -169,6 +192,7 @@
     <a href="../" hreflang="da">Dansk</a> <a href="../no/" hreflang="nb">Norsk</a> <a href="../sv/" hreflang="sv">Svenska</a> <a href="../en/" hreflang="en">English</a>
   </div>
 </footer>
+<script src="../home.js"></script>
 <script src="../lang.js"></script>
 <!-- GoatCounter: tæller besøgende uden cookies. Værtsnavnet sættes foran stien, så én konto dækker alle sider. -->
 <script>window.goatcounter = { path: function (p) { return location.host + p } }</script>
