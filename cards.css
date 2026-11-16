@@ -71,3 +71,4 @@
 .app-promo .ui p { font-size: 14px; max-width: none; margin: 12px 0 0; color: var(--c-muted); }
 .app-promo .ui .ui-toast { color: var(--c-fjord); font-size: 15px; }
 .app-promo .ui .rows-h { margin: 6px 0 0; font-size: 13px; }
+.ui .tick .box { padding: 0; margin: 0; }
